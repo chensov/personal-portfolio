@@ -1,15 +1,6 @@
 // variables & functions
 @import "variables";
 @import "mixin";
-// base & layout
-@import "base";
-
-// colors
-
-// components
-@import "components/card";
-@import "components/header";
-// utilities
 
 :root {
   margin: 0;
@@ -30,6 +21,16 @@
   --elements: #{$element-bg-d};
   --h1-clr: #{$h1-d};
 }
+
+// base & layout
+@import "base";
+
+// colors
+
+// components
+@import "components/card";
+@import "components/header";
+// utilities
 
 body {
   height: 100vh;
