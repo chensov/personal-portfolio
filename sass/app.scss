@@ -1,6 +1,6 @@
 // variables & functions
 @import "variables";
-@import "components/mixin";
+@import "mixin";
 // base & layout
 @import "base";
 
@@ -8,7 +8,7 @@
 
 // components
 @import "components/card";
-
+@import "components/header";
 // utilities
 
 :root {
@@ -16,6 +16,7 @@
   --background: #{$bg-l};
   --p-clr: #{$p-l};
   --elements: #{$element-bg-l};
+  --h1-clr: #{$h1-l};
 }
 
 * {
@@ -27,6 +28,7 @@
   --background: #{$bg-d};
   --p-clr: #{$p-d};
   --elements: #{$element-bg-d};
+  --h1-clr: #{$h1-d};
 }
 
 body {
@@ -36,6 +38,7 @@ body {
   background: var(--background);
   font-size: $p-font-size;
   font-family: "Inter", sans-serif;
+  transition: background 1s ease;
 }
 
 p {

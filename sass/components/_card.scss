@@ -6,14 +6,14 @@
 }
 
 .card:hover {
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 1fr;
   margin: 60px 0;
   box-sizing: border-box;
@@ -21,7 +21,7 @@
   transition: all 200ms ease-out;
   cursor: pointer;
   height: 400px;
-  width: 70%;
+  max-width: 80%;
   background: var(--elements);
   border-radius: $radius30;
   box-shadow: $component-shadow;
@@ -39,20 +39,8 @@
 }
 
 .card .card-left h3 {
-  letter-spacing: -1.25px;
-  color: var(--p-clr);
-  //   background-image: var(--h1);
-  //   background-clip: text;
-  //   -webkit-background-clip: text;
-  //   text-fill-color: transparent;
-  //   -webkit-text-fill-color: transparent;
-}
-
-.card p {
-  color: var(--p-clr);
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  font-size: 4rem;
+  background: var(--h1-clr);
+  @include gradient-l();
 }
 
 .learn-more {
@@ -71,12 +59,14 @@
 .card-left p {
   font-size: 0.9rem;
   font-weight: 400;
+  width: 70%;
+  color: var(--p-clr);
 }
 
 .fa-arrow-right {
   font-size: 1.4rem;
   margin: 0 10px;
-  color: #6e6e6e;
+  color: $font-l-g;
   transition: transform 0.7s ease;
 }
 
@@ -87,12 +77,44 @@
 @media only screen and (max-width: 970px) {
   /* GENERAL STYLES */
 
+  .card-left {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 10px;
+    padding: 20px 0;
+  }
+
   .card .card-left h3 {
     font-size: 1.3rem;
   }
 
   .learn-more {
-    padding: 17px 60px;
+    padding: 17px 30px;
     font-size: 1.1rem;
+    @include flex-center();
+  }
+
+  .card-left p {
+    font-size: 0.9rem;
+
+    font-weight: 400;
+    width: 90%;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    margin: 30px 0;
+    max-width: 80%;
+    height: 40vh;
+  }
+
+  .card img {
+    display: none;
   }
 }

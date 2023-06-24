@@ -10,3 +10,8 @@
 @mixin outline($outline-color: springgreen) {
   outline: 1px solid $outline-color;
 }
+
+@mixin gradient-l() {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

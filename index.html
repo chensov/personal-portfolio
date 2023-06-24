@@ -1,37 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      document.documentElement.className = localStorage.getItem("darkMode") == "enabled" ? "darkmode" : null;
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/app.css" />
     <title>Document</title>
   </head>
-  <body class="">
-    <div class="cards" id="cards-section">
-      <div class="card">
-        <div class="card-left">
-          <h3>Lorem ipsum dolor sit.</h3>
-          <p>Web Devlopment • 2021</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam?</p>
-          <span class="learn-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-        <div class="card-right"><img src="" alt="" /></div>
-      </div>
+  <body id="home">
+    <header class="navbar">
+      <!-- HEADER -->
+      <div class="left"></div>
+      <div class="middle">
+        <ul class="main-nav">
+          <li id="li-link" data-active="home" class="">
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
+          </li>
 
-      <div class="card second">
-        <div class="card-left">
-          <h3>Lorem ipsum dolor sit.</h1>
-          <p>Web Devlopment • 2021</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam?</p>
-          <span class="learn-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+          <li id="li-link" data-active="portfolio" class="">
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Portfolio</a>
+          </li>
+
+          <li id="li-link" data-active="about" class="">
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">About</a>
+          </li>
+
+          <li id="li-link" data-active="contact" class="">
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Contact</a>
+          </li>
+
+          <div class="slide"></div>
+        </ul>
+      </div>
+      <div class="right">
+        <button id="dark-mode-toggle" class="dark-mode-toggle" area-label="toggle dark mode">
+          <i class="bx bx-moon moon" id="moon"></i>
+          <i class="bx bx-sun sun" id="sun"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- CARDS-SECTION -->
+      <div class="cards" id="cards-section">
+        <div class="card">
+          <div class="card-left">
+            <h3>Lorem ipsum dolor sit.</h3>
+            <p>Web Devlopment • 2021</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam?</p>
+            <span class="learn-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <div class="card-right"><img src="assets/img/phone.png" alt="" /></div>
         </div>
-        <div class="card-right">
-          <img src="" class="img_profile1" alt="" />
+        <div class="card second">
+          <div class="card-left">
+            <h3>Lorem ipsum dolor sit.</h3>
+            <p>Web Devlopment • 2021</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam?</p>
+            <span class="learn-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+          <div class="card-right">
+            <img src="assets/img/phone.png" alt="" />
+          </div>
         </div>
       </div>
-    </div>
+      <!-- FOOTER -->
+    </main>
+    <script src="js/app.js"></script>
+    <script src="js/darkmode.js"></script>
   </body>
 </html>
