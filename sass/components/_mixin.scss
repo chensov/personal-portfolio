@@ -1,0 +1,12 @@
+// flex-box
+@mixin flex-center($center: center) {
+  display: flex;
+  justify-content: $center;
+  align-items: $center;
+}
+
+//Misc
+
+@mixin outline($outline-color: springgreen) {
+  outline: 1px solid $outline-color;
+}

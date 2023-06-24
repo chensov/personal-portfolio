@@ -1,0 +1,43 @@
+// variables & functions
+@import "variables";
+@import "components/mixin";
+// base & layout
+@import "base";
+
+// colors
+
+// components
+@import "components/card";
+
+// utilities
+
+:root {
+  margin: 0;
+  --background: #{$bg-l};
+  --p-clr: #{$p-l};
+  --elements: #{$element-bg-l};
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.darkmode {
+  --background: #{$bg-d};
+  --p-clr: #{$p-d};
+  --elements: #{$element-bg-d};
+}
+
+body {
+  height: 100vh;
+  color: $font-color-light;
+  @include flex-center();
+  background: var(--background);
+  font-size: $p-font-size;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  color: $font-color-light;
+}

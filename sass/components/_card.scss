@@ -1,0 +1,98 @@
+.cards {
+  width: 100%;
+  @include flex-center();
+  flex-direction: column;
+  //   @include outline();
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 60px 0;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+  height: 400px;
+  width: 70%;
+  background: var(--elements);
+  border-radius: $radius30;
+  box-shadow: $component-shadow;
+  overflow: hidden;
+}
+
+.card-left {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px 0px 20px 60px;
+}
+
+.card .card-left h3 {
+  letter-spacing: -1.25px;
+  color: var(--p-clr);
+  //   background-image: var(--h1);
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   text-fill-color: transparent;
+  //   -webkit-text-fill-color: transparent;
+}
+
+.card p {
+  color: var(--p-clr);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 4rem;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(229, 229, 229);
+  padding: 17px 60px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  color: $font-l-g;
+  transition: transform 0.6 ease;
+  box-shadow: $element-shadow;
+}
+
+.card-left p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.fa-arrow-right {
+  font-size: 1.4rem;
+  margin: 0 10px;
+  color: #6e6e6e;
+  transition: transform 0.7s ease;
+}
+
+.learn-more:hover .fa-arrow-right {
+  transform: translateX(5px);
+}
+
+@media only screen and (max-width: 970px) {
+  /* GENERAL STYLES */
+
+  .card .card-left h3 {
+    font-size: 1.3rem;
+  }
+
+  .learn-more {
+    padding: 17px 60px;
+    font-size: 1.1rem;
+  }
+}
