@@ -2,7 +2,7 @@
   width: 100%;
   @include flex-center();
   flex-direction: column;
-  //   @include outline();
+  @include outline();
 }
 
 .card:hover {
