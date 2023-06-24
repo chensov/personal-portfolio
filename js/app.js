@@ -10,9 +10,18 @@ li.forEach((el) => {
   });
 });
 
-//navbar
+let links = document.querySelectorAll(".main-nav li");
+let bodyId = document.querySelector("body").id;
 
-function debounce(func, wait = 0, immediate = true) {
+for (let link of links) {
+  if (link.dataset.active === bodyId) {
+    link.classList.add("active");
+  }
+}
+
+//Show - Hide navBar
+
+function debounce(func, wait = 10, immediate = true) {
   let timeout;
   return function () {
     let context = this,
@@ -28,7 +37,7 @@ function debounce(func, wait = 0, immediate = true) {
   };
 }
 
-let scrollPos = 0;
+let scrollPos = 10;
 const nav = document.querySelector(".navbar");
 
 function checkPosition() {
@@ -45,14 +54,8 @@ function checkPosition() {
   scrollPos = windowY;
 }
 
-let links = document.querySelectorAll(".main-nav li");
-let bodyId = document.querySelector("body").id;
-
-for (let link of links) {
-  if (link.dataset.active === bodyId) {
-    link.classList.add("active");
-  }
-}
+// window.addEventListener('scroll', checkPosition);
+window.addEventListener("scroll", debounce(checkPosition));
 
 // Memoji
 

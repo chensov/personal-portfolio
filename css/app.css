@@ -4,6 +4,9 @@
   --p-clr: #707070;
   --elements: #eeeeee;
   --h1-clr: linear-gradient(140deg, #232526 0%, #646464 61%, #414345 100%);
+  --hover: #121212;
+  --slide: #ffffff;
+  --elements-2: #f6f6f6;
 }
 
 * {
@@ -13,9 +16,12 @@
 
 .darkmode {
   --background: #262626;
-  --p-clr: #e5e5e5;
+  --p-clr: #efefef;
   --elements: #212121;
   --h1-clr: linear-gradient(141deg, #adf1e0, #8075ff 28%, #ff7171 98%);
+  --hover: #b2b2b2;
+  --elements-2: #1a1a1a;
+  --slide: #2d2b2b;
 }
 
 body {
@@ -37,13 +43,11 @@ header {
   align-items: center;
   justify-content: space-evenly;
   position: fixed;
-  z-index: 25;
-  outline: 1px solid yellow;
+  z-index: 100;
 }
 
 main {
   width: 100%;
-  outline: 1px solid orange;
 }
 
 .middle {
@@ -57,9 +61,10 @@ main {
   align-items: center;
   width: 65px;
   height: 65px;
-  background: var(--elements);
+  background: var(--elements-2);
   border-radius: 50%;
   box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
+  transition: background 1s ease;
 }
 
 ul {
@@ -68,10 +73,10 @@ ul {
   justify-content: center;
   align-items: center;
   height: 65px;
-  background: var(--elements);
+  background: var(--elements-2);
   border-radius: 40px;
   box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
-  z-index: 10;
+  transition: background 1s ease;
   /* overflow: hidden; */
 }
 
@@ -94,14 +99,14 @@ ul li a {
 }
 
 .active {
-  background: red;
+  background: var(--h1-clr);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
 
 ul li a:hover {
-  color: var(--a-hover);
+  color: var(--hover);
 }
 
 .slide {
@@ -109,13 +114,12 @@ ul li a:hover {
   width: 150px;
   cursor: pointer;
   height: 50px;
-  background: rgb(124, 64, 64);
+  background: var(--slide);
   margin: 0 10px;
   z-index: -1;
   transition: 0.5s;
   opacity: 0;
   border-radius: 30px;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.07);
 }
 
 ul li:nth-child(1).active ~ .slide {
@@ -143,6 +147,33 @@ ul li:nth-child(5).active ~ .slide {
   opacity: 1;
 }
 
+#dark-mode-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+#moon {
+  color: var(--p-clr);
+  font-size: 2rem;
+  display: block;
+}
+
+.darkmode #moon {
+  display: none;
+}
+
+#sun {
+  color: var(--p-clr);
+  font-size: 2rem;
+  display: none;
+}
+
+.darkmode #sun {
+  display: block;
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -151,7 +182,6 @@ ul li:nth-child(5).active ~ .slide {
   align-items: center;
   top: 300px;
   margin-bottom: 50vh;
-  outline: 1px solid springgreen;
 }
 
 .fa-solid {
@@ -162,7 +192,7 @@ ul li:nth-child(5).active ~ .slide {
 .location {
   margin: 20px;
   white-space: nowrap;
-  height: 40px;
+  font-size: 1.25rem;
 }
 
 .location p {
@@ -188,29 +218,30 @@ ul li:nth-child(5).active ~ .slide {
   line-height: 60px;
   text-align: center;
   z-index: 1;
-  color: var(--p1-clr);
+  color: var(--p-clr);
 }
 
 .hero p {
   font-size: 1.15rem;
-  margin: 50px 0;
+  margin: 40px 0px;
   width: 30%;
   text-align: center;
-  color: var(--p1-clr);
+  color: var(--p-clr);
 }
 
 .hero p a {
   text-decoration: none;
-  color: var(--p1-clr);
+  color: var(--p-clr);
   font-weight: 500;
-  padding: 2px 2px;
+  padding: 3px 5px;
   border-radius: 20px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.6s ease, background-color 0.6s ease;
 }
 
 .hero p a:hover {
   color: #fff;
-  background-color: #bcbcbc;
+  padding: 3px 5px;
+  background-color: #7d7d7d;
 }
 
 /* MEMOJI - MAIN  */
@@ -305,8 +336,8 @@ ul li:nth-child(5).active ~ .slide {
 }
 
 #thanks p {
-  color: var(--font-clr);
-  background-color: var(--elements);
+  color: var(--p-clr);
+  background-color: var(--elements-2);
   display: inline;
   padding: 5px 10px;
   border-radius: 30px;
@@ -329,7 +360,6 @@ ul li:nth-child(5).active ~ .slide {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  outline: 1px solid springgreen;
 }
 
 .card:hover {
@@ -440,7 +470,4 @@ ul li:nth-child(5).active ~ .slide {
   .card img {
     display: none;
   }
-}
-p {
-  color: #ffffff;
 }

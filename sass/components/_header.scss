@@ -9,9 +9,10 @@
   align-items: center;
   width: 65px;
   height: 65px;
-  background: var(--elements);
+  background: var(--elements-2);
   border-radius: 50%;
   box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
+  transition: background 1s ease;
 }
 
 ul {
@@ -20,10 +21,11 @@ ul {
   justify-content: center;
   align-items: center;
   height: 65px;
-  background: var(--elements);
+  background: var(--elements-2);
   border-radius: 40px;
   box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
-  z-index: 10;
+  transition: background 1s ease;
+
   /* overflow: hidden; */
 }
 
@@ -46,13 +48,13 @@ ul li a {
 }
 
 .active {
-  background: red;
+  background: var(--h1-clr);
   @include gradient-l();
   font-weight: 700;
 }
 
 ul li a:hover {
-  color: var(--a-hover);
+  color: var(--hover);
 }
 
 .slide {
@@ -60,13 +62,13 @@ ul li a:hover {
   width: 150px;
   cursor: pointer;
   height: 50px;
-  background: rgb(124, 64, 64);
+  background: var(--slide);
   margin: 0 10px;
   z-index: -1;
   transition: 0.5s;
   opacity: 0;
   border-radius: 30px;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.07);
+  // box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.07);
 }
 
 ul li:nth-child(1).active ~ .slide {
@@ -88,4 +90,33 @@ ul li:nth-child(4).active ~ .slide {
 ul li:nth-child(5).active ~ .slide {
   left: 630px;
   opacity: 1;
+}
+
+// Darkmode
+
+#dark-mode-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+#moon {
+  color: var(--p-clr);
+  font-size: 2rem;
+  display: block;
+}
+
+.darkmode #moon {
+  display: none;
+}
+
+#sun {
+  color: var(--p-clr);
+  font-size: 2rem;
+  display: none;
+}
+
+.darkmode #sun {
+  display: block;
 }

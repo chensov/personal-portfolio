@@ -8,6 +8,9 @@
   --p-clr: #{$p-l};
   --elements: #{$element-bg-l};
   --h1-clr: #{$h1-l};
+  --hover: #{$hover-l};
+  --slide: #{$slide-l};
+  --elements-2: #{$element-2-l};
 }
 
 * {
@@ -20,6 +23,9 @@
   --p-clr: #{$p-d};
   --elements: #{$element-bg-d};
   --h1-clr: #{$h1-d};
+  --hover: #{$hover-d};
+  --elements-2: #{$element-2-d};
+  --slide: #{$slide-d};
 }
 
 body {
@@ -39,13 +45,11 @@ header {
   align-items: center;
   justify-content: space-evenly;
   position: fixed;
-  z-index: 25;
-  @include outline(yellow);
+  z-index: 100;
 }
 
 main {
   width: 100%;
-  @include outline(orange);
 }
 
 // base & layout
@@ -58,7 +62,3 @@ main {
 @import "components/hero";
 @import "components/card";
 // utilities
-
-p {
-  color: $font-color-light;
-}
