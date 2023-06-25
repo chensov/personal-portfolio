@@ -20,42 +20,23 @@ for (let link of links) {
 }
 
 //Show - Hide navBar
+const hamburger = document.querySelector(".hamburger");
 
-function debounce(func, wait = 10, immediate = true) {
-  let timeout;
-  return function () {
-    let context = this,
-      args = arguments;
-    let later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    let callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-}
+window.addEventListener("scroll", function () {
+  scrollPosition = window.scrollY;
 
-let scrollPos = 10;
-const nav = document.querySelector(".navbar");
-
-function checkPosition() {
-  let windowY = window.scrollY;
-  if (windowY < scrollPos) {
-    // Scrolling UP
-    nav.classList.add("is-visible");
-    nav.classList.remove("is-hidden");
-  } else {
-    // Scrolling DOWN
-    nav.classList.add("is-hidden");
-    nav.classList.remove("is-visible");
+  if (scrollPosition > 100) {
+    hamburger.classList.remove("hidden");
+    ul.classList.add("hidden");
+    darkModeToggle.classList.add("hidden");
+    mobileNav.classList.remove("hidden");
+  } else if (scrollPosition < 100) {
+    ul.classList.remove("hidden");
+    hamburger.classList.add("hidden");
+    darkModeToggle.classList.remove("hidden");
+    mobileNav.classList.add("hidden");
   }
-  scrollPos = windowY;
-}
-
-// window.addEventListener('scroll', checkPosition);
-window.addEventListener("scroll", debounce(checkPosition));
+});
 
 // Memoji
 
@@ -96,4 +77,18 @@ btn.addEventListener("click", () => {
   } else {
     hideMessage();
   }
+});
+
+//Hamburger menu
+
+const bar1 = document.querySelector(".bar1");
+const bar2 = document.querySelector(".bar2");
+const bar3 = document.querySelector(".bar3");
+const mobileNav = document.querySelector(".mobile-nav");
+
+hamburger.addEventListener("click", () => {
+  bar1.classList.toggle("animateBar1");
+  bar2.classList.toggle("animateBar2");
+  bar3.classList.toggle("animateBar3");
+  mobileNav.classList.toggle("slide-out");
 });
