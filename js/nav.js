@@ -30,17 +30,21 @@ window.addEventListener("scroll", function () {
     ul.classList.add("hidden");
     darkModeToggle.classList.add("hidden");
     mobileNav.classList.remove("hidden");
-    chevronDown.classList.remove("hidden");
   } else if (scrollPosition < 100) {
     ul.classList.remove("hidden");
     hamburger.classList.add("hidden");
     darkModeToggle.classList.remove("hidden");
     mobileNav.classList.add("hidden");
-    chevronDown.classList.add("hidden");
   }
 });
 
 //Hamburger menu icon
+
+document.addEventListener("click", function handleClickOutsideBox(event) {
+  if (!mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+    mobileNav.classList.add("hidden");
+  }
+});
 
 const bar1 = document.querySelector(".bar1");
 const bar2 = document.querySelector(".bar2");

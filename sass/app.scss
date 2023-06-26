@@ -11,6 +11,7 @@
   --hover: #{$hover-l};
   --slide: #{$slide-l};
   --elements-2: #{$element-2-l};
+  --elements-3: #{$element-3-l};
 }
 
 * {
@@ -27,6 +28,7 @@
   --hover: #{$hover-d};
   --elements-2: #{$element-2-d};
   --slide: #{$slide-d};
+  --elements-3: #{$element-3-d};
 }
 
 body {
@@ -51,6 +53,10 @@ header {
 
 main {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 // base & layout
@@ -64,4 +70,4 @@ main {
 @import "components/card";
 @import "components/footer";
 @import "components/about";
-// utilities
+@import "components/tooltip"; // utilities

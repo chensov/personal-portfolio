@@ -3,14 +3,6 @@
 const tooltip = document.getElementById("thanks");
 const btn = document.getElementById("memoji-container");
 
-li.forEach((el) => {
-  el.addEventListener("click", () => {
-    ul.querySelector(".active").classList.remove("active");
-
-    el.classList.add("active");
-  });
-});
-
 const overlay = document.getElementById("product-shape");
 const container = document.getElementById("memoji-container");
 const hoodieColor = () => {
