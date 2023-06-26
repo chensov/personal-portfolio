@@ -1,3 +1,20 @@
+<?php
+    /* Your password */
+    $password = 'cv2023';
+
+    /* Redirects here after login */
+    $redirect_after_login = '/resume.html';
+
+    /* Will not ask password again for */
+    $remember_password = strtotime('+30 days'); // 30 days
+
+    if (isset($_POST['password']) && $_POST['password'] == $password) {
+        setcookie("password", $password, $remember_password);
+        header('Location: ' . $redirect_after_login);
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,9 +29,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/app.css" />
-    <title>Document</title>
+    <title>Locked</title>
   </head>
-  <body id="about">
+  <body id="">
     <header class="navbar">
       <!-- HEADER -->
       <div class="left"></div>
@@ -29,7 +46,7 @@
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact.html' },400);">About</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">About</a>
           </li>
 
           <li id="li-link" data-active="contact" class="">
@@ -65,35 +82,13 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="img-frames">
-          <img src="assets/img/IMG_1.jpg" alt="" id="about-img1" />
-          <img src="assets/img/IMG_2.jpg" alt="" id="about-img2" />
-          <img src="assets/img/IMG_3.jpg" alt="" id="about-img3" />
-        </div>
-        <div class="wrap-text">
-          <div class="main-about">
-            <h1>Hi again, I'm Sen.</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quo ex aliquam officia, quia perferendis dolores impedit sapiente distinctio cum illo porro a tenetur dolore eveniet praesentium, quis quisquam numquam. Repellendus animi earum perspiciatis eius voluptas id, dolorum magni doloremque perferendis vero sint placeat ipsa quis ex, molestias laudantium velit recusandae sed, cumque quos quaerat doloribus nisi facilis quia? Rem, quo esse excepturi nam praesentium mollitia, modi quia natus incidunt iure suscipit voluptatem dolores saepe hic ex provident. Nihil, itaque.</p>
+      <div class="container-locked">
+        <div class="circle-locked">
+          <div class="lock">
+            <i class="fa-solid fa-unlock"></i>
+            <p>This page is unlocked!</p>
           </div>
-        </div>
-        <span></span>
-        <div class="tech-stack">
-          <h3 id="heading3">Languages and Tools</h3>
-          <div id="tech-icons">
-            <span class="tooltip" data-tooltip="HTML5"><img src="assets/img/tech/html.svg" id="html3" onmouseover="changeColorHover(event) " /></span>
-            <span class="tooltip" data-tooltip="CSS3"><img src="assets/img/tech/css3.svg" id="CSS" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="JavaScript"><img src="assets/img/tech/javascript.svg" id="javascript" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Sass"><img src="assets/img/tech/sass.svg" id="sass" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="MySQL"><img src="assets/img/tech/mysql.svg" id="mysql" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Git"><img src="assets/img/tech/git.svg" id="git" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Figma"><img src="assets/img/tech/figma.svg" id="figma" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Adobe XD"><img src="assets/img/tech/adobe-adobe-xd.svg" id="adobe-adobe-xd" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Adobe Illustrator"><img src="assets/img/tech/adobe-illustrator.svg" id="adobe-illustrator" onmouseover="changeColorHover(event)" /></span>
-            <span class="tooltip" data-tooltip="Adobe Photoshop"><img src="assets/img/tech/adobe-photoshop.svg" id="adobe-photoshop" onmouseover="changeColorHover(event)" /></span>
-          </div>
-        </div>
-      </div>
+
 
       <footer>
         <div class="footer-top">
@@ -111,6 +106,5 @@
 
     <script src="js/darkmode.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/heading-color.js"></script>
   </body>
 </html>
