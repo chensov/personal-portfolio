@@ -17,7 +17,6 @@
 }
 .img-frames img {
   width: 20%;
-  border: 10px solid white;
   border-radius: 30px;
   box-shadow: $element-shadow;
 }
@@ -59,7 +58,7 @@
 #about-img1 {
   position: relative;
   transform: rotate(3deg);
-  left: 25px;
+  left: 20px;
   z-index: -1;
 }
 
