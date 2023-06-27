@@ -8,6 +8,7 @@
   --slide: #ffffff;
   --elements-2: #f6f6f6;
   --elements-3: #e2e2e2;
+  font-family: "Inter", sans-serif;
 }
 
 * {
@@ -52,8 +53,10 @@ header {
 main {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
-  min-height: 100vh;
 }
 
 .middle {
@@ -598,8 +601,10 @@ main {
 }
 footer {
   width: 100%;
-  position: absolute;
+  height: 10vh;
+  padding: 30px 0;
   bottom: 0;
+  clear: both;
   background: var(--elements-2);
   display: flex;
   align-items: center;
@@ -623,7 +628,6 @@ footer {
 
 .footer-middle {
   font-size: 1rem;
-  margin: 0px 0;
 }
 
 .container {
@@ -721,6 +725,8 @@ footer {
 .tech-stack h3 {
   color: #797979;
   opacity: 0.9;
+  font-size: 1.4rem;
+  font-weight: 400;
   transition: color 1s;
 }
 
@@ -848,4 +854,229 @@ footer {
   border: none;
   padding: 0 10px;
   outline: none;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 200px;
+  margin-bottom: 20%;
+  position: relative;
+  width: 60%;
+  height: 55vh;
+}
+
+.contact-form {
+  width: 80%;
+  height: 550px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: var(--elements);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 30px;
+}
+
+form {
+  width: 80%;
+  height: 550px;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#name,
+#subject,
+#email {
+  background-color: var(--elements);
+  width: 40%;
+  height: 2.5rem;
+  color: var(--p-clr);
+  font-size: 1.15rem;
+  outline: none;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+#message {
+  color: var(--p-clr);
+  background-color: var(--elements);
+  resize: none;
+  width: 60%;
+  height: 200px;
+  font-size: 1.15rem;
+  border-radius: 50px;
+  padding: 30px 20px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 40px;
+}
+
+.button {
+  --color: #fff;
+  --background: #7b7b7b;
+  --height: 50px;
+  --width: 160px;
+  --icon: #1ab873;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  width: var(--width);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color);
+  line-height: var(--height);
+}
+
+.button:before,
+.button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.button:before {
+  transform: translate(-50%, -50%);
+  width: var(--before-w, var(--width));
+  height: var(--before-h, var(--height));
+  border-radius: var(--before-r, 7px);
+  background: var(--background);
+  transform-origin: 50% 50%;
+  transition: width 0.3s, height 0.3s, border-radius 0.2s;
+  transition-delay: 0.2s;
+}
+
+.button:after {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: var(--icon);
+  z-index: 2;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.button span {
+  z-index: 1;
+  display: block;
+  position: relative;
+  opacity: var(--span-o, 1);
+  transform: scale(var(--span-s, 1));
+  transition: opacity 0.3s, transform 0.2s;
+  transition-delay: 0.2s;
+}
+
+.button svg {
+  width: 15px;
+  height: 13px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  stroke: var(--icon);
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transform: translate(-50%, -50%);
+  stroke-dasharray: 17px;
+  stroke-dashoffset: var(--svg-o, 17px);
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.button.processing {
+  --before-w: 41px;
+  --before-h: 41px;
+  --before-r: 22px;
+  --span-o: 0;
+  --span-s: 0.6;
+  --after-s: 1;
+  --svg-o: 34px;
+}
+
+.button.processing:before {
+  -webkit-animation: pulse 3s linear forwards;
+  animation: pulse 3s linear forwards;
+}
+
+.button.processing:after {
+  -webkit-animation: dot 3s linear forwards;
+  animation: dot 3s linear forwards;
+}
+
+.button.processing svg {
+  transition-delay: 3s;
+}
+
+@-webkit-keyframes pulse {
+  4% {
+    transform: translate(-50%, -50%) scaleX(1.1);
+  }
+  8% {
+    transform: translate(-50%, -50%);
+  }
+  24%, 56%, 88% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  40%, 72% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+@keyframes pulse {
+  4% {
+    transform: translate(-50%, -50%) scaleX(1.1);
+  }
+  8% {
+    transform: translate(-50%, -50%);
+  }
+  24%, 56%, 88% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  40%, 72% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+@-webkit-keyframes dot {
+  8% {
+    transform: scale(0);
+  }
+  16% {
+    transform: scale(1) rotate(30deg) translateX(48px);
+  }
+  95% {
+    transform: scale(1) rotate(1000deg) translateX(48px);
+  }
+  100% {
+    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+  }
+}
+@keyframes dot {
+  8% {
+    transform: scale(0);
+  }
+  16% {
+    transform: scale(1) rotate(30deg) translateX(48px);
+  }
+  95% {
+    transform: scale(1) rotate(1000deg) translateX(48px);
+  }
+  100% {
+    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+  }
 }

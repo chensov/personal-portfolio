@@ -12,6 +12,7 @@
   --slide: #{$slide-l};
   --elements-2: #{$element-2-l};
   --elements-3: #{$element-3-l};
+  font-family: "Inter", sans-serif;
 }
 
 * {
@@ -54,8 +55,10 @@ header {
 main {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
-  min-height: 100vh;
 }
 
 // base & layout
@@ -71,4 +74,6 @@ main {
 @import "components/about";
 @import "components/tooltip";
 @import "components/locked";
+@import "components/contact";
+
 // utilities
