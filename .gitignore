@@ -3,6 +3,7 @@ node_modules
 PHPMailer
 # misc
 .DS_Store
+assets
 
 #
 locked_.php
