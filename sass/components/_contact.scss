@@ -7,13 +7,13 @@
   margin-bottom: 20%;
   position: relative;
   width: 60%;
-  height: 55vh;
+  height: 54vh;
   //   @include outline(red);
 }
 
 .contact-form {
   width: 80%;
-  height: 550px;
+  height: 800px;
   box-sizing: border-box;
   border-radius: 50px;
   background-color: var(--elements);
@@ -59,167 +59,65 @@ form {
   padding: 30px 20px;
   border: none;
   font-family: "Inter", sans-serif;
-  margin-bottom: 40px;
 }
 
-// Button
+.success {
+  margin: 20px;
+  font-size: 0.9rem;
+  color: var(--p-clr);
+  background: rgba(61, 166, 127, 0.6);
+  padding: 10px 40px;
+  border-radius: 10px;
+}
 
-.button {
-  --color: #fff;
-  --background: #7b7b7b;
-  --height: 50px;
-  --width: 160px;
-  --icon: #1ab873;
-  padding: 0;
+#button {
+  position: relative;
+
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #3be9a9;
+  border: solid 1px transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
   cursor: pointer;
-  text-align: center;
-  position: relative;
-  border: none;
-  outline: none;
-  background: none;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-  width: var(--width);
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color);
-  line-height: var(--height);
-}
-.button:before,
-.button:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.button:before {
-  transform: translate(-50%, -50%);
-  width: var(--before-w, var(--width));
-  height: var(--before-h, var(--height));
-  border-radius: var(--before-r, 7px);
-  background: var(--background);
-  transform-origin: 50% 50%;
-  transition: width 0.3s, height 0.3s, border-radius 0.2s;
-  transition-delay: 0.2s;
-}
-.button:after {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  background: var(--icon);
-  z-index: 2;
-  border-radius: 50%;
-  transform: scale(0);
-}
-.button span {
-  z-index: 1;
-  display: block;
-  position: relative;
-  opacity: var(--span-o, 1);
-  transform: scale(var(--span-s, 1));
-  transition: opacity 0.3s, transform 0.2s;
-  transition-delay: 0.2s;
-}
-.button svg {
-  width: 15px;
-  height: 13px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  stroke: var(--icon);
-  stroke-width: 3px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  transform: translate(-50%, -50%);
-  stroke-dasharray: 17px;
-  stroke-dashoffset: var(--svg-o, 17px);
-  transition: stroke-dashoffset 0.3s ease;
-}
-.button.processing {
-  --before-w: 41px;
-  --before-h: 41px;
-  --before-r: 22px;
-  --span-o: 0;
-  --span-s: 0.6;
-  --after-s: 1;
-  --svg-o: 34px;
-}
-.button.processing:before {
-  -webkit-animation: pulse 3s linear forwards;
-  animation: pulse 3s linear forwards;
-}
-.button.processing:after {
-  -webkit-animation: dot 3s linear forwards;
-  animation: dot 3s linear forwards;
-}
-.button.processing svg {
-  transition-delay: 3s;
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
 }
 
-@-webkit-keyframes pulse {
-  4% {
-    transform: translate(-50%, -50%) scaleX(1.1);
+#paper-plane {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.run-animation-plane {
+  animation: paperPlane 2.4s 1;
+}
+
+@keyframes paperPlane {
+  0% {
+    transform: rotate(10deg);
   }
-  8% {
-    transform: translate(-50%, -50%);
-  }
-  24%,
-  56%,
-  88% {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  40%,
-  72% {
-    transform: translate(-50%, -50%) scale(1.2);
+  100% {
+    transform: translate(100px, -100px);
   }
 }
 
-@keyframes pulse {
-  4% {
-    transform: translate(-50%, -50%) scaleX(1.1);
-  }
-  8% {
-    transform: translate(-50%, -50%);
-  }
-  24%,
-  56%,
-  88% {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  40%,
-  72% {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
+.loader_icon {
+  display: none;
 }
-@-webkit-keyframes dot {
-  8% {
-    transform: scale(0);
-  }
-  16% {
-    transform: scale(1) rotate(30deg) translateX(48px);
-  }
-  95% {
-    transform: scale(1) rotate(1000deg) translateX(48px);
-  }
-  100% {
-    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
-  }
+
+.btn-txt-success {
+  display: none;
 }
-@keyframes dot {
-  8% {
-    transform: scale(0);
-  }
-  16% {
-    transform: scale(1) rotate(30deg) translateX(48px);
-  }
-  95% {
-    transform: scale(1) rotate(1000deg) translateX(48px);
-  }
-  100% {
-    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
-  }
+
+.success {
+  margin: 20px;
+  font-size: 0.9rem;
+  color: var(--p-clr);
+  background: rgba(61, 166, 127, 0.6);
+  padding: 10px 40px;
+  border-radius: 10px;
+  display: none;
 }

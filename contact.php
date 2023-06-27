@@ -36,7 +36,7 @@
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact.html' },400);">Contact</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/contact.php' },400);">Contact</a>
           </li>
 
           <div class="slide"></div>
@@ -74,18 +74,16 @@
           <input type="email" id="email" placeholder="Email"name="email" autocomplete="off" required/>
           <input type="text" id="subject" placeholder="Subject" autocomplete="off" name="subject"  required/>
           <textarea name="message" placeholder="Message..." id="message"></textarea>
-          <div class="btn-wrap">
-            <button class="button" type="submit" name="send">
-              <span>Submit</span>
-              <svg viewBox="0 0 15 13">
-                <polyline points="2 6.5 6 10.5 13 2.5"></polyline>
-              </svg>
+                    <div class="success">Thanks for contacting me! I will be in touch with you shortly.</div>
+
+                    <div class="btn-wrap">
+            <button type="submit" id="button">
+              <span class="btn-txt" id="btn-txt">Send<i id="paper-plane"class="fa-regular fa-paper-plane run-animation-plane"></i></i></span><span class="btn-txt-success">Sent </span><i class="fa fa-spinner fa-spin loader_icon"></i>
             </button>
-            <div class="success"></div>
           </div>
         </form>
       </div>
-      <div class="loader_icon" style="display:none;"><i class="fa fa-spinner fa-spin"></i></div>
+      
       <footer>
         <div class="footer-top">
           <a href="https://github.com/chensov" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -105,18 +103,30 @@ $(document).on("submit", "form", function(e){
 e.preventDefault(); // avoid executing the actual submission of the form
 var form = $(this);
 $(".loader_icon").show();
+$(".btn-txt").hide();
 $.ajax({
 url: $(this).attr("action"),
 type: $(this).attr("method"),
 data: new FormData(this),
 processData: false,
 contentType: false,
+
+//If email sent successfully
 success: function (message, status){
-$('.success').html(message).fadeIn(1000);
+$('#success').html(message).fadeIn(1000);
 $(".loader_icon").hide();
+$(".btn-txt").hide();
+setTimeout(function() { $(".btn-txt").slideDown(); }, 2300);
+$(".btn-txt-success").show();
+setTimeout(function() { $(".btn-txt-success").hide(); }, 2000);
+
+$(".success").slideDown('slow');
 $("#name").val('');
+
 $("#email").val('');
+
 $("#subject").val('');
+
 $("#message").val('');
 },
 error: function (xhr, ajaxOptions, thrownError){

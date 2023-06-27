@@ -1,3 +1,21 @@
+.left button {
+  display: flex;
+  border: none;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  background: var(--elements-2);
+  border-radius: 50%;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13);
+  transition: background 1s ease;
+}
+
+.left button:hover {
+  box-shadow: 0px 0px 10px 10px rgba(103, 103, 103, 0.13);
+}
+
 .middle {
   width: 650px;
   height: 65px;
