@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  top: 200px;
+  top: 300px;
   margin-bottom: 20%;
   position: relative;
-  width: 60%;
+  width: 80%;
   min-height: 50vh;
   // @include outline(red);
 }
@@ -38,7 +38,7 @@ form {
 #subject,
 #email {
   background-color: var(--elements);
-  width: 40%;
+  width: 60%;
   height: 2.5rem;
   color: var(--p-clr);
   font-size: 1.15rem;
@@ -59,6 +59,12 @@ form {
   padding: 30px 20px;
   border: none;
   font-family: "Inter", sans-serif;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgb(81, 238, 186);
 }
 
 .success {
@@ -74,7 +80,7 @@ form {
   position: relative;
 
   width: 200px;
-  height: 36px;
+  height: 40px;
   border-radius: 18px;
   background-color: #3be9a9;
   border: solid 1px transparent;
@@ -113,27 +119,18 @@ form {
   display: none;
 }
 
-.success {
-  margin: 20px;
-  font-size: 0.9rem;
-  color: var(--p-clr);
-  background: rgba(61, 166, 127, 0.6);
-  padding: 10px 40px;
-  border-radius: 10px;
-  display: none;
-}
-
 //modal
 
 .modal-container {
-  display: none;
+  //display: none;
+  display: block;
 }
 
 #modal-contents {
-  max-width: 1160px;
-  height: 400px;
+  min-width: 40%;
+  height: 350px;
   max-height: 100%;
-  background-color: #3b61e9;
+  background-color: var(--elements);
   z-index: 99999;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -148,6 +145,16 @@ form {
   flex-direction: column;
 }
 
+#modal-contents p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 20px;
+}
+
 .modal-bg {
   position: fixed;
   top: 0;
@@ -155,10 +162,167 @@ form {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(83, 120, 124, 0.1);
   backdrop-filter: blur(5px);
+  cursor: pointer;
 }
 
 .modal-open {
   display: block;
+}
+
+#close-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(229, 229, 229);
+  padding: 17px 60px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  color: $font-l-g;
+  border: none;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+#close-modal:hover {
+  opacity: 0.9;
+}
+
+#successAnimation {
+  margin-bottom: 5%;
+}
+
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #c0c0c0;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #a2a2a2;
+}
+
+#successAnimationResult {
+  fill: #cccccc;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  -webkit-animation: 1s ease-out 0s 1 both scaleAnimation;
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+}
+#successAnimation.animated #successAnimationCircle {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationCheck {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck, 0.3s linear 0.9s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationResult {
+  -webkit-animation: 0.3s linear 0.9s both fadeIn;
+  animation: 0.3s linear 0.9s both fadeIn;
+}
+
+#replay {
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 3px;
+  bottom: 100px;
+  color: #fff;
+  left: 50%;
+  outline: 0;
+  padding: 10px 30px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+#replay:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@-webkit-keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

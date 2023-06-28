@@ -67,18 +67,26 @@
         </div>
       </div>
     </header>
-    <main>
+
+          <div class="modal-container">
+    <div class="modal-bg"></div>
+    <div id="modal-contents">
+     Thanks for getting in touch. I will respond shortly.
+   
+      <button id="close-modal">Close</button>
+    </div>
+</div>
       <div class="contact-container">
       <form method="POST" id="ajaxform" action="mailer" enctype="multipart/form-data">
           <input type="text" placeholder="Name" autocomplete="off" name="name" id="name" required />
           <input type="email" id="email" placeholder="Email"name="email" autocomplete="off" required/>
           <input type="text" id="subject" placeholder="Subject" autocomplete="off" name="subject"  required/>
           <textarea name="message" placeholder="Message..." id="message"></textarea>
-                    <div class="success">Thanks for contacting me! I will be in touch with you shortly.</div>
+                    <!-- <div class="success">Thanks for contacting me! I will be in touch with you shortly.</div> -->
 
                     <div class="btn-wrap">
             <button type="submit" id="button">
-              <span class="btn-txt" id="btn-txt">Send<i id="paper-plane"class="fa-regular fa-paper-plane run-animation-plane"></i></i></span><span class="btn-txt-success">Sent </span><i class="fa fa-spinner fa-spin loader_icon"></i>
+              <span class="btn-txt" id="btn-txt">Send<i id="paper-plane"class="fa-regular fa-paper-plane run-animation-plane"></i></i></span><i class="fa fa-spinner fa-spin loader_icon"></i>
             </button>
           </div>
         </form>
@@ -96,7 +104,7 @@
         </div>
         <div class="footer-left"></div>
       </footer>
-    </main>
+ 
     
     <script>
 $(document).on("submit", "form", function(e){
@@ -113,12 +121,10 @@ contentType: false,
 
 //If email sent successfully
 success: function (message, status){
-$('#success').html(message).fadeIn(1000);
 $(".loader_icon").hide();
 $(".btn-txt").hide();
 setTimeout(function() { $(".btn-txt").slideDown(); }, 2300);
-$(".btn-txt-success").show();
-setTimeout(function() { $(".btn-txt-success").hide(); }, 2000);
+$(".modal-container").addClass('modal-open');
 
 $(".success").slideDown('slow');
 $("#name").val('');
@@ -137,6 +143,6 @@ alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 </script>
     <script src="/js/darkmode.js"></script>
     <script src="/js/nav.js"></script>
-    
+    <script src="/js/modal.js"></script>
   </body>
 </html>

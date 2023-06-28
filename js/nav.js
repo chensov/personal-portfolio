@@ -57,3 +57,18 @@ hamburger.addEventListener("click", () => {
   bar3.classList.toggle("animateBar3");
   mobileNav.classList.toggle("slide-out");
 });
+
+//animation
+var animation = document.getElementById("successAnimation");
+var restart = document.getElementById("replay");
+
+restart.addEventListener(
+  "click",
+  function (e) {
+    e.preventDefault;
+    animation.classList.remove("animated");
+    void animation.parentNode.offsetWidth;
+    animation.classList.add("animated");
+  },
+  false
+);
