@@ -68,30 +68,41 @@
       </div>
     </header>
 
-          <div class="modal-container">
-    <div class="modal-bg"></div>
-    <div id="modal-contents">
-     Thanks for getting in touch. I will respond shortly.
-   
-      <button id="close-modal">Close</button>
-    </div>
-</div>
-      <div class="contact-container">
-      <form method="POST" id="ajaxform" action="mailer" enctype="multipart/form-data">
-          <input type="text" placeholder="Name" autocomplete="off" name="name" id="name" required />
-          <input type="email" id="email" placeholder="Email"name="email" autocomplete="off" required/>
-          <input type="text" id="subject" placeholder="Subject" autocomplete="off" name="subject"  required/>
-          <textarea name="message" placeholder="Message..." id="message"></textarea>
-                    <!-- <div class="success">Thanks for contacting me! I will be in touch with you shortly.</div> -->
+    <div class="modal-container">
+      <div class="modal-bg"></div>
+      <div id="modal-contents">
+        <svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 70 70">
+          <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z" />
+          <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent" />
+          <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent" />
+        </svg>
+         <p id='inputName'></p>
 
-                    <div class="btn-wrap">
-            <button type="submit" id="button">
-              <span class="btn-txt" id="btn-txt">Send<i id="paper-plane"class="fa-regular fa-paper-plane run-animation-plane"></i></i></span><i class="fa fa-spinner fa-spin loader_icon"></i>
-            </button>
-          </div>
-        </form>
+        <p>I will respond shortly.</p>
+
+        <button id="close-modal"><i class="fa-solid fa-house"></i>Home</button>
       </div>
-      
+    </div>
+
+    <div class="contact-container">
+      <section class="heading">
+        <h1>Contact</h1>
+        <p>Get in touch or shoot me an email directly on <a href="mailto:hello@senche.dev?subject=Hey Sen! I was on your portfolio and wanted to reach out 👻">hello@senche.dev</a></p>
+      </section>
+      <form method="POST" id="ajaxform" action="mailer" enctype="multipart/form-data">
+        <input type="text" placeholder="Name" autocomplete="off" name="name" id="name" required />
+
+        <input type="email" id="email" placeholder="Email" name="email" autocomplete="off" required />
+        <input type="text" id="subject" placeholder="Subject" autocomplete="off" name="subject" required />
+        <textarea name="message" placeholder="Message..." id="message" required></textarea>
+
+        <div class="btn-wrap">
+          <button type="submit" id="button">
+            <span class="btn-txt" id="btn-txt">Send<i id="paper-plane" class="fa-regular fa-paper-plane run-animation-plane"></i></span><i class="fa fa-spinner fa-spin loader_icon"></i>
+          </button>
+        </div>
+      </form>
+    </div>
       <footer>
         <div class="footer-top">
           <a href="https://github.com/chensov" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -125,10 +136,10 @@ $(".loader_icon").hide();
 $(".btn-txt").hide();
 setTimeout(function() { $(".btn-txt").slideDown(); }, 2300);
 $(".modal-container").addClass('modal-open');
-
+$(".contact-container").addClass('hidden');
 $(".success").slideDown('slow');
-$("#name").val('');
-
+$("#name");
+$('#inputName').text('Thanks for your email ' + $('#name').val() + ' 😊');
 $("#email").val('');
 
 $("#subject").val('');

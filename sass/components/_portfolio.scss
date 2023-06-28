@@ -1,11 +1,31 @@
 .portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 200px;
+  margin-bottom: 20%;
+  position: relative;
+  width: 100%;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.heading {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-self: center;
-
-  @include outline(red);
-}
-
-.card-grid {
+  justify-content: center;
+  flex-direction: column;
+  margin: 2% 0;
 }

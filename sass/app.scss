@@ -12,7 +12,7 @@
   --slide: #{$slide-l};
   --elements-2: #{$element-2-l};
   --elements-3: #{$element-3-l};
-  font-family: "Inter", sans-serif;
+  --h2-clr: #{$h2-l};
 }
 
 html {
@@ -23,6 +23,7 @@ html {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
 
 .darkmode {
@@ -34,11 +35,11 @@ html {
   --elements-2: #{$element-2-d};
   --slide: #{$slide-d};
   --elements-3: #{$element-3-d};
+  --h2-clr: #{$h2-d};
 }
 
 body {
   color: $font-color-light;
-
   background: var(--background);
   font-size: $p-font-size;
   font-family: "Inter", sans-serif;
@@ -76,6 +77,16 @@ p a:hover {
   background-color: #7d7d7d;
 }
 
+h3 {
+  color: var(--h1-clr);
+}
+
+.heading h1 {
+  background: var(--h2-clr);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // base & layout
 @import "base";
 
@@ -90,5 +101,5 @@ p a:hover {
 @import "components/tooltip";
 @import "components/locked";
 @import "components/contact";
-
+@import "components/portfolio";
 // utilities

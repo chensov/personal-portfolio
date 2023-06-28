@@ -3,12 +3,26 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  top: 300px;
+  top: 200px;
   margin-bottom: 20%;
   position: relative;
   width: 80%;
   min-height: 50vh;
   // @include outline(red);
+}
+
+#contact-heading {
+  padding: 30px 0;
+}
+
+#contact-heading h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.heading p {
+  color: var(--p-clr);
+  font-size: 1rem;
 }
 
 .contact-form {
@@ -64,7 +78,7 @@ form {
 
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 5px rgb(81, 238, 186);
+  box-shadow: inset 0 0 10px rgba(7, 7, 7, 0.1);
 }
 
 .success {
@@ -122,15 +136,16 @@ textarea:focus {
 //modal
 
 .modal-container {
-  //display: none;
-  display: block;
+  display: none;
+  // display: block;
 }
 
 #modal-contents {
-  min-width: 40%;
-  height: 350px;
+  width: 40vw;
+  height: 30vh;
   max-height: 100%;
-  background-color: var(--elements);
+  backdrop-filter: blur(9px);
+  background-color: rgba(99, 99, 99, 0.555);
   z-index: 99999;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -162,8 +177,19 @@ textarea:focus {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(12, 12, 12, 0.2);
+  cursor: pointer;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(83, 120, 124, 0.1);
-  backdrop-filter: blur(5px);
+
   cursor: pointer;
 }
 
@@ -175,18 +201,28 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(229, 229, 229);
-  padding: 17px 60px;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  color: $font-l-g;
-  border: none;
+  background-color: #e5e5e5;
+  width: 200px;
+  height: 40px;
+  border-radius: 18px;
+  background: transparent;
+  outline: solid 1px white;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
   cursor: pointer;
+  border: none;
   margin-top: 5%;
+  transition: opacity 0.6s ease;
+}
+
+#close-modal i {
+  color: #fff;
+  margin-right: 5px;
 }
 
 #close-modal:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 #successAnimation {
@@ -195,16 +231,16 @@ textarea:focus {
 
 #successAnimationCircle {
   stroke-dasharray: 151px 151px;
-  stroke: #c0c0c0;
+  stroke: #77e9b4;
 }
 
 #successAnimationCheck {
   stroke-dasharray: 36px 36px;
-  stroke: #a2a2a2;
+  stroke: #2eba95;
 }
 
 #successAnimationResult {
-  fill: #cccccc;
+  fill: #3ae39d;
   opacity: 0;
 }
 
@@ -325,4 +361,9 @@ textarea:focus {
   100% {
     opacity: 1;
   }
+}
+
+.heading p {
+  margin: 30px 0;
+  font-size: 1rem;
 }
