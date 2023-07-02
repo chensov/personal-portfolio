@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="css/app.css" />
-    <title>Document</title>
+    <title>Portfolio</title>
   </head>
   <body id="portfolio">
     <header class="navbar">
@@ -21,47 +23,45 @@
       <div class="left"></div>
       <div class="middle">
         <ul class="main-nav">
-          <li id="li-link" data-active="home" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
+          <li id="li-link" data-active="home" class="active">
+            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Home</a>
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/portfolio.html' },400);">Portfolio</a>
+            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Portfolio</a>
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/about.html' },400);">About</a>
+            <a href="javascript:setTimeout(()=>{window.location = '# },400);">About</a>
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Contact</a>
+            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Contact</a>
           </li>
+          <span class="toggle-wrap">
+            <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
+              <i class="bx bx-moon moon"></i>
+              <i class="bx bx-sun sun"></i></button
+          ></span>
 
           <div class="slide"></div>
         </ul>
       </div>
-      <div class="right">
-        <div class="hamburger hidden">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
-          <i class="bx bx-moon moon"></i>
-          <i class="bx bx-sun sun"></i>
-        </button>
-        <div class="mobile-nav hidden">
+      <div class="right hidden">
+        <input type="checkbox" class="toggler" id="toggle" />
+        <div class="hamburger-1"><div></div></div>
+        <div class="mobile-nav" id="mobile-nav">
           <ul>
-            <li data-active="home"><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="#">Portfolio</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="#">About</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="#">Contact</a></li>
+            <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
+            <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
+            <span id="mobile-nav-border"></span>
+            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+              <i class="bx bx-moon moon"></i>
+              <i class="bx bx-sun sun"></i>
+            </button>
           </ul>
-          <span></span>
-          <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-            <i class="bx bx-moon moon"></i>
-            <i class="bx bx-sun sun"></i>
-          </button>
         </div>
       </div>
     </header>

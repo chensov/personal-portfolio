@@ -13,6 +13,7 @@
   --elements-2: #{$element-2-l};
   --elements-3: #{$element-3-l};
   --h2-clr: #{$h2-l};
+  --hover-toggle: #{$hover-toggle-l};
 }
 
 html {
@@ -36,6 +37,7 @@ html {
   --slide: #{$slide-d};
   --elements-3: #{$element-3-d};
   --h2-clr: #{$h2-d};
+  --hover-toggle: #{$hover-toggle-d};
 }
 
 body {
@@ -60,6 +62,13 @@ header {
   justify-content: space-between;
   position: fixed;
   z-index: 100;
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 p a {
@@ -103,3 +112,9 @@ h3 {
 @import "components/contact";
 @import "components/portfolio";
 // utilities
+
+@media only screen and (min-width: 768px) {
+  header {
+    top: 10px;
+  }
+}

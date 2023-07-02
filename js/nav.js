@@ -20,20 +20,19 @@ for (let link of links) {
 }
 
 //Show - Hide navBar
-const hamburger = document.querySelector(".hamburger");
+const rightSection = document.querySelector(".right");
 const chevronDown = document.querySelector("sroll-down");
 window.addEventListener("scroll", function () {
   scrollPosition = window.scrollY;
 
   if (scrollPosition > 100) {
-    hamburger.classList.remove("hidden");
+    rightSection.classList.remove("hidden");
+
     ul.classList.add("hidden");
-    darkModeToggle.classList.add("hidden");
-    mobileNav.classList.remove("hidden");
   } else if (scrollPosition < 100) {
     ul.classList.remove("hidden");
-    hamburger.classList.add("hidden");
-    darkModeToggle.classList.remove("hidden");
+    rightSection.classList.add("hidden");
+    hamCheckBox.checked = false;
     mobileNav.classList.add("hidden");
   }
 });
@@ -41,34 +40,18 @@ window.addEventListener("scroll", function () {
 //Hamburger menu icon
 
 document.addEventListener("click", function handleClickOutsideBox(event) {
-  if (!mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+  if (!mobileNav.contains(event.target) && !rightSection.contains(event.target)) {
+    mobileNav.classList.add("hidden");
+    hamCheckBox.checked = false;
+  }
+});
+const mobileNav = document.getElementById("mobile-nav");
+const hamCheckBox = document.getElementById("toggle");
+
+hamCheckBox.addEventListener("click", () => {
+  if (hamCheckBox.checked) {
+    mobileNav.classList.remove("hidden");
+  } else {
     mobileNav.classList.add("hidden");
   }
 });
-
-const bar1 = document.querySelector(".bar1");
-const bar2 = document.querySelector(".bar2");
-const bar3 = document.querySelector(".bar3");
-const mobileNav = document.querySelector(".mobile-nav");
-
-hamburger.addEventListener("click", () => {
-  bar1.classList.toggle("animateBar1");
-  bar2.classList.toggle("animateBar2");
-  bar3.classList.toggle("animateBar3");
-  mobileNav.classList.toggle("slide-out");
-});
-
-//animation
-var animation = document.getElementById("successAnimation");
-var restart = document.getElementById("replay");
-
-restart.addEventListener(
-  "click",
-  function (e) {
-    e.preventDefault;
-    animation.classList.remove("animated");
-    void animation.parentNode.offsetWidth;
-    animation.classList.add("animated");
-  },
-  false
-);

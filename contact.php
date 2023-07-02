@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,8 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="/css/app.css" />
-    <title>Document</title>
+    <title>Contact</title>
   </head>
   <body id="contact">
     <header class="navbar">
@@ -28,15 +28,15 @@
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/portfolio.html' },400);">Portfolio</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">About</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact.php' },400);">Contact</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
           </li>
 
           <div class="slide"></div>
@@ -54,16 +54,16 @@
         </button>
         <div class="mobile-nav hidden">
           <ul>
-            <li data-active="home"><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="#">Portfolio</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="#">About</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="#">Contact</a></li>
+            <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
+            <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
+            <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
+            <span></span>
+            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+              <i class="bx bx-moon moon"></i>
+              <i class="bx bx-sun sun"></i>
+            </button>
           </ul>
-          <span></span>
-          <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-            <i class="bx bx-moon moon"></i>
-            <i class="bx bx-sun sun"></i>
-          </button>
         </div>
       </div>
     </header>
