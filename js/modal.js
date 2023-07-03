@@ -10,5 +10,3 @@ modalBg.addEventListener("click", () => {
 modalBtn.addEventListener("click", () => {
   location.href = "/";
 });
-
-modalBtn.ap;

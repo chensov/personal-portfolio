@@ -54,21 +54,23 @@ body {
 }
 
 header {
-  top: 50px;
-  width: 80%;
-  height: 100px;
+  min-width: 100%;
+  min-height: 120px;
+  top: 0;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   position: fixed;
-  z-index: 100;
+  z-index: 1060;
 }
 
 .main-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+  min-width: 100%;
+  min-height: 100vh;
 }
 
 p a {
@@ -113,8 +115,8 @@ h3 {
 @import "components/portfolio";
 // utilities
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
   header {
-    top: 10px;
+    justify-content: flex-end;
   }
 }

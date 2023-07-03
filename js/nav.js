@@ -34,24 +34,28 @@ window.addEventListener("scroll", function () {
     rightSection.classList.add("hidden");
     hamCheckBox.checked = false;
     mobileNav.classList.add("hidden");
+    mobileBg.classList.add("hidden");
   }
 });
 
 //Hamburger menu icon
 
-document.addEventListener("click", function handleClickOutsideBox(event) {
-  if (!mobileNav.contains(event.target) && !rightSection.contains(event.target)) {
-    mobileNav.classList.add("hidden");
-    hamCheckBox.checked = false;
-  }
-});
+const mobileBg = document.querySelector(".mobile-bg");
 const mobileNav = document.getElementById("mobile-nav");
 const hamCheckBox = document.getElementById("toggle");
 
 hamCheckBox.addEventListener("click", () => {
   if (hamCheckBox.checked) {
     mobileNav.classList.remove("hidden");
+    mobileBg.classList.remove("hidden");
   } else {
     mobileNav.classList.add("hidden");
+    mobileBg.classList.add("hidden");
   }
+});
+
+mobileBg.addEventListener("click", () => {
+  mobileNav.classList.add("hidden");
+  hamCheckBox.checked = false;
+  mobileBg.classList.add("hidden");
 });

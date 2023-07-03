@@ -19,7 +19,7 @@
   <body id="home">
     <header class="navbar">
       <!-- HEADER -->
-      <div class="left"></div>
+
       <div class="middle">
         <ul class="main-nav">
           <li id="li-link" data-active="home" class="active">
@@ -49,20 +49,23 @@
       <div class="right hidden">
         <input type="checkbox" class="toggler" id="toggle" />
         <div class="hamburger-1"><div></div></div>
-        <div class="mobile-nav" id="mobile-nav">
+
+        <div class="mobile-nav hidden" id="mobile-nav">
           <ul>
             <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
             <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
             <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
             <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
-            <span id="mobile-nav-border"></span>
-            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-              <i class="bx bx-moon moon"></i>
-              <i class="bx bx-sun sun"></i>
-            </button>
+            <span id="mobile-nav-border">
+              <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+                <i class="bx bx-moon moon"></i>
+                <i class="bx bx-sun sun"></i>
+              </button>
+            </span>
           </ul>
         </div>
       </div>
+      <div class="mobile-bg hidden"></div>
     </header>
 
     <!-- HERO -->
