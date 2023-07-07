@@ -4,9 +4,9 @@
   align-items: center;
   min-width: 60px;
   min-height: 60px;
-  background: var(--elements-2);
+  background: var(--slide);
   border-radius: 50%;
-  box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.12);
   transition: background 1s ease;
   margin: 0 20px;
   z-index: 1060;
@@ -135,16 +135,17 @@
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
   opacity: 0;
+  left: 99999px;
 }
 
 .mobile-nav {
   position: absolute;
-  top: 115px;
+  top: 110px;
   right: auto;
   min-width: 250px;
-  background: var(--elements-2);
+  background: var(--slide);
   border-radius: 30px;
   box-shadow: 0 9px 30px 0 rgba(0, 0, 0, 0.2);
   transition: transform 1s ease;
@@ -205,9 +206,9 @@
   top: 0;
   left: 0;
   z-index: 1040;
-  width: 100vw;
+  width: 200vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+
   cursor: pointer;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -273,9 +274,6 @@
   transition: all 0.6s ease;
 }
 
-/* CREATING THE TOP AND BOTTOM LINES : 
-TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
-
 .hamburger-1 > div::before,
 .hamburger-1 > div::after {
   content: "";
@@ -292,8 +290,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   top: 10px;
 }
 
-/* IF THE TOGGLER IS IN ITS CHECKED STATE, THEN SETTING THE BACKGROUND OF THE MIDDLE LAYER TO COMPLETE BLACK AND OPAQUE :  */
-
 .toggler:checked + .hamburger-1 > div {
   background: rgba(0, 0, 0, 0);
 }
@@ -304,23 +300,15 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   background: #bcbcbc;
 }
 
-/* AND ROTATING THE TOP AND BOTTOM LINES :  */
-
 .toggler:checked + .hamburger-1 > div::after {
   top: 0;
   transform: rotate(135deg);
   background: #bcbcbc;
 }
 
-/* MAIN MENU WITH THE WHITE BACKGROUND AND THE TEXT :  */
-
-/* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
-
 .toggler:checked ~ .menu {
   width: 30%;
 }
-
-/* STYLING THE LIST :  */
 
 .menu > div > ul {
   display: flex;
@@ -328,8 +316,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   position: fixed;
   top: 70px;
   padding-left: 10px;
-
-  /* HIDDEN INITIALLY  :  */
 
   visibility: hidden;
 }
@@ -345,8 +331,6 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   font-size: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* WHEN THE TOGGLER IS CHECKED, CHANGE THE VISIBILITY TO VISIBLE :  */
 
 .toggler:checked ~ .menu > div > ul {
   transition: visibility 0.4s ease;
@@ -366,7 +350,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   .mobile-nav {
     position: absolute;
     top: 110px;
-    left: 20%;
+
     right: 5%;
   }
   .middle {
@@ -385,59 +369,59 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   }
 
   .right {
-    visibility: visible;
+    display: block;
+    opacity: 1;
+  }
+}
+// <--------MAX 768-------->
+
+@media only screen and (max-width: 768px) {
+  .mobile-nav {
+    position: absolute;
+    top: 110px;
+
+    right: 5%;
+  }
+  .middle {
+    display: none;
+    opacity: 0;
+  }
+  .right {
+    min-width: 50px;
+    min-height: 50px;
+  }
+  .moon {
+    font-size: 1.35rem;
+  }
+  .sun {
+    font-size: 1.35rem;
+  }
+
+  .right {
+    display: block;
     opacity: 1;
   }
 }
 
-// @media only screen and (min-width: 600px) and (max-width: 768px) {
-//   .middle {
-//     display: none;
-//     opacity: 0;
-//   }
-//   #dark-mode-btn1 {
-//     display: none;
-//   }
-//   .right {
-//     display: block;
-//     opacity: 1;
-//   }
-//   .mobile-nav {
-//     display: block;
-//     opacity: 1;
-//   }
+// <--------MAX 768-------->
 
-//   .mobile-nav button {
-//     margin-top: 10px;
-//     padding-top: 10px;
-//     border-top: 1px solid rgb(163, 163, 163);
-//     width: 100%;
-//   }
-// }
+@media only screen and (max-width: 992px) {
+  .middle {
+    display: none;
+    opacity: 0;
+  }
 
-// @media only screen and (min-width: 768px) and (max-width: 992px) {
-//   .middle {
-//     display: none;
-//     opacity: 0;
-//   }
-//   #dark-mode-btn1 {
-//     display: none;
-//   }
-//   #ham-menu {
-//     display: block;
-//     opacity: 1;
-//   }
-//   .mobile-nav {
-//     display: block;
-//     opacity: 1;
-//   }
-//   .mobile-nav button {
-//     margin-top: 10px;
-//     padding-top: 10px;
-//     border-top: 1px solid rgb(163, 163, 163);
-//     width: 100%;
-//   }
-// }
+  .right {
+    display: block;
+    opacity: 1;
+  }
+  .mobile-nav {
+    position: absolute;
+    top: 110px;
+
+    right: 5%;
+  }
+}
 
 // @media only screen and (min-width: 992px) and (max-width: 1200px) {
 //   .middle {

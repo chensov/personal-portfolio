@@ -28,9 +28,9 @@ window.addEventListener("scroll", function () {
   if (scrollPosition > 100) {
     rightSection.classList.remove("hidden");
 
-    ul.classList.add("hidden");
+    ul.classList.add("is-hidden");
   } else if (scrollPosition < 100) {
-    ul.classList.remove("hidden");
+    ul.classList.remove("is-hidden");
     rightSection.classList.add("hidden");
     hamCheckBox.checked = false;
     mobileNav.classList.add("hidden");
@@ -43,11 +43,13 @@ window.addEventListener("scroll", function () {
 const mobileBg = document.querySelector(".mobile-bg");
 const mobileNav = document.getElementById("mobile-nav");
 const hamCheckBox = document.getElementById("toggle");
+const navUl = document.getElementById("mobile-nav-ul");
 
 hamCheckBox.addEventListener("click", () => {
   if (hamCheckBox.checked) {
     mobileNav.classList.remove("hidden");
     mobileBg.classList.remove("hidden");
+    navUl.classList.remove("is-hidden");
   } else {
     mobileNav.classList.add("hidden");
     mobileBg.classList.add("hidden");

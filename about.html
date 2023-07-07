@@ -17,9 +17,8 @@
     <title>About</title>
   </head>
   <body id="about">
-    <header class="navbar">
-      <!-- HEADER -->
-      <div class="left"></div>
+    <!-- HEADER -->
+    <header>
       <div class="middle">
         <ul class="main-nav">
           <li id="li-link" data-active="home" class="">
@@ -37,34 +36,35 @@
           <li id="li-link" data-active="contact" class="">
             <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
           </li>
+          <span class="toggle-wrap">
+            <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
+              <i class="bx bx-moon moon"></i>
+              <i class="bx bx-sun sun"></i></button
+          ></span>
 
           <div class="slide"></div>
         </ul>
       </div>
-      <div class="right">
-        <div class="hamburger hidden">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
-          <i class="bx bx-moon moon"></i>
-          <i class="bx bx-sun sun"></i>
-        </button>
-        <div class="mobile-nav hidden">
+      <div class="right hidden">
+        <input type="checkbox" class="toggler" id="toggle" />
+        <div class="hamburger-1"><div></div></div>
+
+        <div class="mobile-nav hidden" id="mobile-nav">
           <ul>
             <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
             <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
             <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
             <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
-            <span></span>
-            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-              <i class="bx bx-moon moon"></i>
-              <i class="bx bx-sun sun"></i>
-            </button>
+            <span id="mobile-nav-border">
+              <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+                <i class="bx bx-moon moon"></i>
+                <i class="bx bx-sun sun"></i>
+              </button>
+            </span>
           </ul>
         </div>
       </div>
+      <div class="mobile-bg hidden"></div>
     </header>
 
     <div class="container">
@@ -76,7 +76,9 @@
       <div class="wrap-text">
         <div class="main-about">
           <div class="h1-wrap-about"><h1>Hi again, I'm Sen.</h1></div>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quo ex aliquam officia, quia perferendis dolores impedit sapiente distinctio cum illo porro a tenetur dolore eveniet praesentium, quis quisquam numquam. Repellendus animi earum perspiciatis eius voluptas id, dolorum magni doloremque perferendis vero sint placeat ipsa quis ex, molestias laudantium velit recusandae sed, cumque quos quaerat doloribus nisi facilis quia? Rem, quo esse excepturi nam praesentium mollitia, modi quia natus incidunt iure suscipit voluptatem dolores saepe hic ex provident. Nihil, itaque.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vitae ad dignissimos soluta impedit aperiam, totam reiciendis quos accusamus quia!</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa minus quos magnam corrupti, suscipit explicabo, rem eius ducimus accusamus sunt similique ratione hic, quae voluptas voluptatibus ut aut reiciendis debitis?</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, consequatur. Optio consequatur quisquam voluptas ut dolor odit, ipsam amet fuga.</p>
           <p>You can find me resume <a href="/locked">here</a> and If you want to chat, feel free to <a href="/contact">reach out.</a></p>
         </div>
       </div>

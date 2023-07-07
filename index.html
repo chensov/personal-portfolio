@@ -14,28 +14,28 @@
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="css/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <title>Personal Portfolio | Sen Chensov</title>
   </head>
   <body id="home">
-    <header class="navbar">
-      <!-- HEADER -->
-
+    <!-- HEADER -->
+    <header>
       <div class="middle">
         <ul class="main-nav">
           <li id="li-link" data-active="home" class="active">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Home</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Portfolio</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '# },400);">About</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Contact</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
           </li>
           <span class="toggle-wrap">
             <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
@@ -85,7 +85,7 @@
           </div>
         </div>
 
-        <h1>Hi, I'm Sen.</h1>
+        <h1 class="hero-title">Hi, I'm Sen.</h1>
 
         <p>A UX designer and front-end developer, currently working as freelancer. Find out more <a href="/about.html">about me</a> 👻</p>
       </div>

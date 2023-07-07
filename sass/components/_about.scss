@@ -6,8 +6,7 @@
   top: 200px;
   margin-bottom: 20%;
   position: relative;
-  width: 60%;
-  // @include outline(orange);
+  width: 100%;
 }
 
 .img-frames {
@@ -35,20 +34,22 @@
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  max-width: 780px;
+  line-height: 170%;
   box-sizing: border-box;
   padding: 0 30px;
 }
 
 .main-about p {
-  font-size: 1.05rem;
+  font-size: 1.11rem;
   color: var(--p-clr);
-  width: 90%;
-  line-height: 35px;
+  max-width: 90%;
+  line-height: 170%;
   display: block;
 }
 
 .main-about p ~ p {
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .h1-wrap-about {
@@ -57,7 +58,7 @@
   justify-content: flex-start;
   width: 90%;
   margin: 5% 0;
-  font-size: 1.5rem;
+  font-size: 1.11rem;
   background-image: var(--h1-clr);
   background-clip: text;
   -webkit-background-clip: text;
@@ -97,8 +98,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: 40px 0;
+  width: 100%;
+  margin: 40px 10px;
   //   @include outline(orange);
 }
 
@@ -114,14 +115,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;
-
   align-items: center;
-  width: 80%;
+  width: 60%;
   margin-top: 30px;
 }
 
 .tech-stack img {
-  width: 80px;
+  width: auto;
   height: 80px;
   transition: all 0.3s ease-in;
   opacity: 0.5;
@@ -138,4 +138,51 @@
   transform: scale(1.15);
   opacity: 1;
   filter: grayscale(0);
+}
+
+@media only screen and (max-width: 600px) and (max-width: 780px) {
+  .container {
+    width: 100%;
+
+    top: 100px;
+  }
+  .img-frames img {
+    height: 200px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: $element-shadow;
+  }
+
+  .main-about h1 {
+    font-size: 1.6rem;
+  }
+
+  .main-about p {
+    font-size: 1rem;
+    color: var(--p-clr);
+    width: 100%;
+    line-height: 35px;
+    display: block;
+  }
+
+  #tech-icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .tech-stack img {
+    width: auto;
+    max-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #tech-icons {
+    gap: 20px;
+  }
 }

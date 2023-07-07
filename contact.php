@@ -18,55 +18,7 @@
     <title>Contact</title>
   </head>
   <body id="contact">
-    <header class="navbar">
-      <!-- HEADER -->
-      <div class="left"></div>
-      <div class="middle">
-        <ul class="main-nav">
-          <li id="li-link" data-active="home" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
-          </li>
-
-          <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
-          </li>
-
-          <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
-          </li>
-
-          <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
-          </li>
-
-          <div class="slide"></div>
-        </ul>
-      </div>
-      <div class="right">
-        <div class="hamburger hidden">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
-          <i class="bx bx-moon moon"></i>
-          <i class="bx bx-sun sun"></i>
-        </button>
-        <div class="mobile-nav hidden">
-          <ul>
-            <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
-            <span></span>
-            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-              <i class="bx bx-moon moon"></i>
-              <i class="bx bx-sun sun"></i>
-            </button>
-          </ul>
-        </div>
-      </div>
-    </header>
+  
 
     <div class="modal-container">
       <div class="modal-bg"></div>

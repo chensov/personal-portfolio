@@ -18,25 +18,24 @@
     <title>Portfolio</title>
   </head>
   <body id="portfolio">
-    <header class="navbar">
-      <!-- HEADER -->
-      <div class="left"></div>
+    <!-- HEADER -->
+    <header>
       <div class="middle">
         <ul class="main-nav">
-          <li id="li-link" data-active="home" class="active">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Home</a>
+          <li id="li-link" data-active="home" class="">
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Portfolio</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '# },400);">About</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '#' },400);">Contact</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
           </li>
           <span class="toggle-wrap">
             <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
@@ -50,20 +49,23 @@
       <div class="right hidden">
         <input type="checkbox" class="toggler" id="toggle" />
         <div class="hamburger-1"><div></div></div>
-        <div class="mobile-nav" id="mobile-nav">
+
+        <div class="mobile-nav hidden" id="mobile-nav">
           <ul>
             <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
             <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
             <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
             <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
-            <span id="mobile-nav-border"></span>
-            <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
-              <i class="bx bx-moon moon"></i>
-              <i class="bx bx-sun sun"></i>
-            </button>
+            <span id="mobile-nav-border">
+              <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+                <i class="bx bx-moon moon"></i>
+                <i class="bx bx-sun sun"></i>
+              </button>
+            </span>
           </ul>
         </div>
       </div>
+      <div class="mobile-bg hidden"></div>
     </header>
 
     <div class="portfolio-container">
@@ -140,7 +142,7 @@
 
     <script src="js/darkmode.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/backtotop.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>

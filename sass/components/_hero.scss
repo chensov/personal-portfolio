@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 200px;
-  margin-bottom: 300px;
+  margin-top: auto;
+  margin-bottom: 30px;
 }
 
 .fa-solid {
@@ -153,23 +153,21 @@
 }
 
 .is-hidden {
-  transition: all 0.7s ease-in-out;
+  visibility: hidden;
   opacity: 0;
-}
-.is-visible {
-  opacity: 0.95;
-  transition: all 0.7s ease-in-out;
 }
 
 // //Responsive
 
 @media only screen and (max-width: 600px) {
   .hero {
-    margin-bottom: 10px;
+    margin-top: auto;
   }
 
   .hero h1 {
     font-size: 4rem;
+    transform: translateZ(0);
+    will-change: transform;
   }
 
   .hero p {
@@ -179,11 +177,9 @@
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .hero {
-    top: 100px;
-    margin-bottom: 100px;
+    margin-top: auto;
   }
 
   .hero h1 {
@@ -197,27 +193,11 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .hero {
-    margin-bottom: 5rem;
-    top: 20px;
+    margin-top: auto;
   }
 }
-
-// @media only screen and (min-width: 1200px) {
-//   .hero {
-//     margin-bottom: 5rem;
-//     top: 200px;
-//   }
-//   .hero h1 {
-//     margin-top: 5px;
-//   }
-
-//   .hero p {
-//     max-width: 80%;
-//     font-size: 1rem;
-//   }
-// }
 
 /* Medium devices (landscape tablets, 768px and up) */
 // @media only screen and (min-width: 768px) {...}

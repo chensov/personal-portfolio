@@ -49,7 +49,7 @@ class MagneticObject {
   constructor(domElement) {
     this.domElement = domElement;
     this.boundingClientRect = this.domElement.getBoundingClientRect();
-    this.triggerArea = 120;
+    this.triggerArea = 90;
     this.interpolationFactor = 0.8;
 
     this.lerpingData = {

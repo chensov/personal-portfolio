@@ -14,6 +14,7 @@
   --elements-3: #{$element-3-l};
   --h2-clr: #{$h2-l};
   --hover-toggle: #{$hover-toggle-l};
+  --elements-4: #{$element-4-l};
 }
 
 html {
@@ -38,6 +39,7 @@ html {
   --elements-3: #{$element-3-d};
   --h2-clr: #{$h2-d};
   --hover-toggle: #{$hover-toggle-d};
+  --elements-4: #{$element-4-d};
 }
 
 body {
@@ -115,7 +117,7 @@ h3 {
 @import "components/portfolio";
 // utilities
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 300px) and (max-width: 992px) {
   header {
     justify-content: flex-end;
   }

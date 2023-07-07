@@ -27,7 +27,7 @@
 
 .contact-form {
   width: 80%;
-  height: 800px;
+  max-height: 700px;
   box-sizing: border-box;
   border-radius: 50px;
   background-color: var(--elements);
@@ -52,7 +52,7 @@ form {
 #subject,
 #email {
   background-color: var(--elements);
-  width: 60%;
+  min-width: 70%;
   height: 2.5rem;
   color: var(--p-clr);
   font-size: 1.15rem;
@@ -66,7 +66,7 @@ form {
   color: var(--p-clr);
   background-color: var(--elements);
   resize: none;
-  width: 60%;
+  min-width: 70%;
   height: 200px;
   font-size: 1.15rem;
   border-radius: 50px;
@@ -168,6 +168,7 @@ textarea:focus {
   font-size: 1rem;
   font-weight: 400;
   margin: 20px;
+  text-align: center;
 }
 
 .modal-bg {
@@ -190,8 +191,8 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   background-color: #e5e5e5;
-  width: 200px;
-  height: 40px;
+  min-width: 200px;
+  min-height: 40px;
   border-radius: 18px;
   background: transparent;
   outline: solid 1px white;
@@ -354,4 +355,23 @@ textarea:focus {
 .heading p {
   margin: 30px 0;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 987px) {
+  .contact-container {
+    margin-bottom: 90px;
+    top: 50px;
+  }
+
+  #name,
+  #subject,
+  #email,
+  #message {
+    width: 100%;
+  }
+
+  .heading p {
+    min-width: 60%;
+    text-align: center;
+  }
 }
