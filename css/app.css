@@ -214,7 +214,11 @@ h3 {
   opacity: 1;
 }
 
-.moon {
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 100, "opsz" 40;
+}
+
+.material-symbols-outlined {
   background: var(--h1-clr);
   background-clip: text;
   -webkit-background-clip: text;
@@ -527,6 +531,12 @@ h3 {
   font-size: 1.25rem;
 }
 
+.particle-wrapper {
+  left: -31px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .location p {
   display: inline-block;
 }
@@ -667,6 +677,8 @@ h3 {
   }
   .hero h1 {
     font-size: 4rem;
+    transform: translateZ(0);
+    will-change: transform;
   }
   .hero p {
     font-size: 1rem;
@@ -693,6 +705,158 @@ h3 {
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
+.particle-1 {
+  position: absolute;
+  top: 90px;
+  right: 159px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background-color: #323235;
+  opacity: 0.4;
+  -webkit-transform: rotate(51deg);
+  -ms-transform: rotate(51deg);
+  transform: rotate(51deg);
+}
+
+.particle-1.purple {
+  border-radius: 15px;
+  background-color: #8474f9;
+}
+
+.particle-2 {
+  position: absolute;
+  top: 200px;
+  right: 600px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: #323235;
+  opacity: 0.3;
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.particle-2.pink {
+  border-radius: 15px;
+  background-color: #f4717d;
+}
+
+.particle-3 {
+  position: absolute;
+  top: 94px;
+  right: 624px;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background-color: #323235;
+  opacity: 0.4;
+  -webkit-transform: rotate(-17deg);
+  -ms-transform: rotate(-17deg);
+  transform: rotate(-17deg);
+}
+
+.particle-3.blue {
+  border-radius: 15px;
+  background-color: #55a5ff;
+}
+
+.particle-4 {
+  position: absolute;
+  top: 64px;
+  right: 428px;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  background-color: #000;
+  opacity: 0.2;
+  -webkit-transform: rotate(26deg);
+  -ms-transform: rotate(26deg);
+  transform: rotate(26deg);
+}
+
+.particle-4.pink {
+  border-radius: 15px;
+  background-color: #f4717d;
+}
+
+.particle-5 {
+  position: absolute;
+  top: 203px;
+  right: 448px;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+}
+
+.particle-5.purple {
+  border-radius: 15px;
+  background-color: #8474f9;
+}
+
+.particle-6 {
+  position: absolute;
+  top: 251px;
+  right: 262px;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(14deg);
+  -ms-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+
+.particle-6.blue {
+  border-radius: 15px;
+  background-color: #55a5ff;
+}
+
+.particle-7 {
+  position: absolute;
+  top: 213px;
+  right: 304px;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background-color: #323235;
+  opacity: 0.2;
+  -webkit-transform: rotate(-14deg);
+  -ms-transform: rotate(-14deg);
+  transform: rotate(-14deg);
+}
+
+.particle-7.purple {
+  border-radius: 15px;
+  background-color: #8474f9;
+}
+
+.particle-8 {
+  position: absolute;
+  top: 111px;
+  right: 64px;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background-color: #323235;
+  opacity: 0.15;
+  -webkit-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  transform: rotate(17deg);
+}
+
+.particle-8.pink {
+  border-radius: 15px;
+  background-color: #f4717d;
+}
+
 .cards {
   width: 100%;
   display: flex;

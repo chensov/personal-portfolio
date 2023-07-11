@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="css/app.css" />
@@ -39,7 +39,7 @@
           </li>
           <span class="toggle-wrap">
             <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
-              <i class="bx bx-moon moon"></i>
+              <span class="material-symbols-outlined"> dark_mode </span>
               <i class="bx bx-sun sun"></i></button
           ></span>
 
@@ -70,11 +70,11 @@
 
     <!-- HERO -->
     <div class="main-wrapper">
-      <div class="hero">
+      <div class="hero" id="hero">
         <span id="thanks">
           <p id="phrase">Thanks!</p>
         </span>
-        <div class="circle">
+        <div class="circle" id="circle">
           <div class="memoji-wrap" id="memwrap">
             <div id="memoji-container">
               <svg id="product-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.67 125.67">
@@ -85,9 +85,20 @@
           </div>
         </div>
 
-        <h1 class="hero-title">Hi, I'm Sen.</h1>
+        <h1 id="hero-title">Hi, I'm Sen.</h1>
 
         <p>A UX designer and front-end developer, currently working as freelancer. Find out more <a href="/about.html">about me</a> 👻</p>
+
+        <div class="particle-wrapper">
+          <div class="particle-8"></div>
+          <div class="particle-7"></div>
+          <div class="particle-6"></div>
+          <div class="particle-5"></div>
+          <div class="particle-4"></div>
+          <div class="particle-3"></div>
+          <div class="particle-2"></div>
+          <div class="particle-1"></div>
+        </div>
       </div>
       <footer>
         <div class="footer-top">
@@ -107,6 +118,25 @@
         </div>
         <div class="footer-left"></div>
       </footer>
+      <script>
+        $(document).ready(function () {
+          var plane = document.getElementById("");
+          var rocket = document.getElementById("");
+          plane.homePos = { x: plane.offsetLeft, y: plane.offsetTop };
+          rocket.homePos = { x: rocket.offsetLeft, y: rocket.offsetTop };
+
+          $("").mousemove(function (e) {
+            parallax(e, plane, 20);
+            parallax(e, rocket, 29);
+          });
+        });
+
+        function parallax(e, target, layer) {
+          var x = target.homePos.x - (e.pageX - target.homePos.x) / layer;
+          var y = target.homePos.y - (e.pageY - target.homePos.y) / layer;
+          $(target).offset({ top: y, left: x });
+        }
+      </script>
 
       <script src="js/memoji.js"></script>
       <script src="js/darkmode.js"></script>

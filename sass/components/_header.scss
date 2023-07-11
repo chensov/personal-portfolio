@@ -112,7 +112,11 @@
 
 // Darkmode
 
-.moon {
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 100, "opsz" 40;
+}
+
+.material-symbols-outlined {
   background: var(--h1-clr);
   @include gradient-l();
   font-size: 1.25rem;
