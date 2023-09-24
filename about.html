@@ -2,15 +2,28 @@
 <html lang="en">
   <head>
     <script>
-      document.documentElement.className = localStorage.getItem("darkMode") == "enabled" ? "darkmode" : null;
+      document.documentElement.className =
+        localStorage.getItem("darkMode") == "enabled" ? "darkmode" : null;
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="css/app.css" />
@@ -22,22 +35,37 @@
       <div class="middle">
         <ul class="main-nav">
           <li id="li-link" data-active="home" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);"
+              >Home</a
+            >
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);"
+              >Portfolio</a
+            >
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/about' },400);"
+              >About</a
+            >
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/contact' },400);"
+              >Contact</a
+            >
           </li>
           <span class="toggle-wrap">
-            <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
+            <button
+              class="dark-mode-toggle"
+              id="dark-mode-btn1"
+              area-label="toggle dark mode"
+            >
               <i class="bx bx-moon moon"></i>
               <i class="bx bx-sun sun"></i></button
           ></span>
@@ -51,12 +79,23 @@
 
         <div class="mobile-nav hidden" id="mobile-nav">
           <ul>
-            <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
+            <li data-active="home">
+              <i class="fa-solid fa-house"></i><a href="/">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-briefcase"></i
+              ><a href="/portfolio">Portfolio</a>
+            </li>
             <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
+            <li>
+              <i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a>
+            </li>
             <span id="mobile-nav-border">
-              <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+              <button
+                class="dark-mode-toggle"
+                id="dark-mode-btn2"
+                area-label="toggle dark mode"
+              >
                 <i class="bx bx-moon moon"></i>
                 <i class="bx bx-sun sun"></i>
               </button>
@@ -69,43 +108,118 @@
 
     <div class="container">
       <div class="img-frames">
-        <img src="assets/img/IMG_1.jpg" alt="" id="about-img1" />
-        <img src="assets/img/IMG_2.jpg" alt="" id="about-img2" />
+        <img src="assets/img/IMG_2.png" alt="" id="about-img2" />
         <img src="assets/img/IMG_3.jpg" alt="" id="about-img3" />
       </div>
       <div class="wrap-text">
         <div class="main-about">
           <div class="h1-wrap-about"><h1>Hi again, I'm Sen.</h1></div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vitae ad dignissimos soluta impedit aperiam, totam reiciendis quos accusamus quia!</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa minus quos magnam corrupti, suscipit explicabo, rem eius ducimus accusamus sunt similique ratione hic, quae voluptas voluptatibus ut aut reiciendis debitis?</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, consequatur. Optio consequatur quisquam voluptas ut dolor odit, ipsam amet fuga.</p>
-          <p>You can find me resume <a href="/locked">here</a> and If you want to chat, feel free to <a href="/contact">reach out.</a></p>
+
+          <p>
+            I'm an aspiring web developer with a passion for creating
+            user-friendly and aesthetically pleasing digital experiences. My
+            primary specialisation is front-end development using technologies
+            like HTML, CSS, and JavaScript. Currently, I'm expanding my skill
+            set by learning the JavaScript framework React JS to further enhance
+            my capabilities. I also have a solid understanding of Git and
+            version control, which ensures effective collaboration and efficient
+            code management.
+          </p>
+
+          <p>
+            Outside of web development, I find great joy in pursuing DIY
+            projects 🛠️, where I enjoy creating, building or restoring things.
+            When I'm not coding or crafting, you'll often find me going on hikes
+            with my fox red lab 🐕.
+          </p>
+
+          <p>
+            I'm excited to connect with others who share similar interests and
+            passions in the world of web development and beyond.
+            <br /><br />Feel free to <a href="/contact">reach out</a>.
+          </p>
         </div>
       </div>
 
       <div class="tech-stack">
         <h3 id="heading3">Tools and technologies I use</h3>
         <div id="tech-icons">
-          <span class="tooltip" data-tooltip="HTML5"><img src="assets/img/tech/html.svg" id="html3" onmouseover="changeColorHover(event) " /></span>
-          <span class="tooltip" data-tooltip="CSS3"><img src="assets/img/tech/css3.svg" id="CSS" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="JavaScript"><img src="assets/img/tech/javascript.svg" id="javascript" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Sass"><img src="assets/img/tech/sass.svg" id="sass" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="MySQL"><img src="assets/img/tech/mysql.svg" id="mysql" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Git"><img src="assets/img/tech/git.svg" id="git" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Figma"><img src="assets/img/tech/figma.svg" id="figma" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Adobe XD"><img src="assets/img/tech/adobe-adobe-xd.svg" id="adobe-adobe-xd" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Adobe Illustrator"><img src="assets/img/tech/adobe-illustrator.svg" id="adobe-illustrator" onmouseover="changeColorHover(event)" /></span>
-          <span class="tooltip" data-tooltip="Adobe Photoshop"><img src="assets/img/tech/adobe-photoshop.svg" id="adobe-photoshop" onmouseover="changeColorHover(event)" /></span>
+          <span class="tooltip" data-tooltip="HTML5"
+            ><img
+              src="assets/img/tech/html.svg"
+              id="html3"
+              onmouseover="changeColorHover(event) "
+          /></span>
+          <span class="tooltip" data-tooltip="CSS3"
+            ><img
+              src="assets/img/tech/css3.svg"
+              id="CSS"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="JavaScript"
+            ><img
+              src="assets/img/tech/javascript.svg"
+              id="javascript"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Sass"
+            ><img
+              src="assets/img/tech/sass.svg"
+              id="sass"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="MySQL"
+            ><img
+              src="assets/img/tech/mysql.svg"
+              id="mysql"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Git"
+            ><img
+              src="assets/img/tech/git.svg"
+              id="git"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Figma"
+            ><img
+              src="assets/img/tech/figma.svg"
+              id="figma"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Adobe XD"
+            ><img
+              src="assets/img/tech/adobe-adobe-xd.svg"
+              id="adobe-adobe-xd"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Adobe Illustrator"
+            ><img
+              src="assets/img/tech/adobe-illustrator.svg"
+              id="adobe-illustrator"
+              onmouseover="changeColorHover(event)"
+          /></span>
+          <span class="tooltip" data-tooltip="Adobe Photoshop"
+            ><img
+              src="assets/img/tech/adobe-photoshop.svg"
+              id="adobe-photoshop"
+              onmouseover="changeColorHover(event)"
+          /></span>
         </div>
       </div>
     </div>
 
     <footer>
       <div class="footer-top">
-        <a href="https://github.com/chensov" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://codepen.io/senche" target="_blank"> <i class="fa-brands fa-codepen"></i></a>
+        <a href="https://github.com/chensov" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://codepen.io/senche" target="_blank">
+          <i class="fa-brands fa-codepen"></i
+        ></a>
 
-        <a href="https://github.com/chensov" target="_blank"> <i class="fa-brands fa-dribbble"></i></a>
+        <a href="https://github.com/chensov" target="_blank">
+          <i class="fa-brands fa-dribbble"></i
+        ></a>
       </div>
       <div class="footer-middle">
         <p>Copyright © 2023 senche.dev. All rights reserved.</p>

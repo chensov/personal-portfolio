@@ -26,6 +26,7 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
+  text-decoration: none;
 }
 
 .darkmode {
@@ -53,6 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  user-select: none;
 }
 
 header {
@@ -71,8 +73,10 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-width: 100%;
-  min-height: 100vh;
+  top: 200px;
+  margin-bottom: 20vh;
+  position: relative;
+  width: 100%;
 }
 
 p a {

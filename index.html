@@ -2,19 +2,31 @@
 <html lang="en">
   <head>
     <script>
-      document.documentElement.className = localStorage.getItem("darkMode") == "enabled" ? "darkmode" : null;
+      document.documentElement.className =
+        localStorage.getItem("darkMode") == "enabled" ? "darkmode" : null;
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="css/app.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"></script>
     <title>Personal Portfolio | Sen Chensov</title>
   </head>
   <body id="home">
@@ -23,23 +35,38 @@
       <div class="middle">
         <ul class="main-nav">
           <li id="li-link" data-active="home" class="active">
-            <a href="javascript:setTimeout(()=>{window.location = '/' },400);">Home</a>
+            <a href="javascript:setTimeout(()=>{window.location = '/' },400);"
+              >Home</a
+            >
           </li>
 
           <li id="li-link" data-active="portfolio" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);">Portfolio</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/portfolio' },400);"
+              >Portfolio</a
+            >
           </li>
 
           <li id="li-link" data-active="about" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/about' },400);">About</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/about' },400);"
+              >About</a
+            >
           </li>
 
           <li id="li-link" data-active="contact" class="">
-            <a href="javascript:setTimeout(()=>{window.location = '/contact' },400);">Contact</a>
+            <a
+              href="javascript:setTimeout(()=>{window.location = '/contact' },400);"
+              >Contact</a
+            >
           </li>
           <span class="toggle-wrap">
-            <button class="dark-mode-toggle" id="dark-mode-btn1" area-label="toggle dark mode">
-              <span class="material-symbols-outlined"> dark_mode </span>
+            <button
+              class="dark-mode-toggle"
+              id="dark-mode-btn1"
+              area-label="toggle dark mode"
+            >
+              <i class="bx bx-moon moon"></i>
               <i class="bx bx-sun sun"></i></button
           ></span>
 
@@ -52,12 +79,23 @@
 
         <div class="mobile-nav hidden" id="mobile-nav">
           <ul>
-            <li data-active="home"><i class="fa-solid fa-house"></i><a href="/">Home</a></li>
-            <li><i class="fa-solid fa-briefcase"></i><a href="/portfolio">Portfolio</a></li>
+            <li data-active="home">
+              <i class="fa-solid fa-house"></i><a href="/">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-briefcase"></i
+              ><a href="/portfolio">Portfolio</a>
+            </li>
             <li><i class="fa-solid fa-user"></i><a href="/about">About</a></li>
-            <li><i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a></li>
+            <li>
+              <i class="fa-solid fa-envelope"></i><a href="/contact">Contact</a>
+            </li>
             <span id="mobile-nav-border">
-              <button class="dark-mode-toggle" id="dark-mode-btn2" area-label="toggle dark mode">
+              <button
+                class="dark-mode-toggle"
+                id="dark-mode-btn2"
+                area-label="toggle dark mode"
+              >
                 <i class="bx bx-moon moon"></i>
                 <i class="bx bx-sun sun"></i>
               </button>
@@ -70,77 +108,59 @@
 
     <!-- HERO -->
     <div class="main-wrapper">
-      <div class="hero" id="hero">
+      <div class="hero">
         <span id="thanks">
           <p id="phrase">Thanks!</p>
         </span>
-        <div class="circle" id="circle">
+        <div class="circle">
           <div class="memoji-wrap" id="memwrap">
             <div id="memoji-container">
-              <svg id="product-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.67 125.67">
-                <path id="product-shape" class="cls-1" d="m.2,125.5l.39-8.68.35-10.82.32-7.02s.32-2.74.74-4.04,1.51-3.72,1.51-3.72l3.16-3.65v-.35l-.67-.74.49-1.51s1.9-2.67,2.04-3.51.63-2.18.63-2.18l1.72-2.14,3.27-2.11,4.39-2.18,2.07-.56,2.56.77.18.25v3.41s7.76,7.83,9.55,8.78,3.23,1.05,3.23,1.05c0,0,3.27-.18,4.14-.84s.95-1.93.95-1.93c0,0,.46-2.04.49-2.6s.35-2.63.35-2.63l.28-2.21v-2.56s-.42.25-.74-.21.32-.91.32-.91c0,0,7.99-3.67,9.95-6.95,0,0,1.01-.14,1.12,0s0,1.4,0,1.4c0,0,5.57-.64,6.59-.44,0,0,4.17,1.46,5.34,2.6s15.17,13.92,15.17,13.92c0,0-1.63-16.16-.38-17.01s1.55-1.55,1.55-1.55v-8.31s.23-.29.47-.29h13.22s.58,7.67,1.05,7.79,2.28,1.98,2.92,3.38,1.17,4.11,1.17,4.11l1.34,8.87.38,6.62s.96,13.25.93,14.59-.5,4.81-.73,5.16-1.6,4.43-4.49,6.24-7.96,1.23-7.96,1.23c0,0-4.46-1.49-5.72-2.28s-13.19-11.03-13.19-11.03c0,0-4.35-4.03-5.34-4.73s-1.05-.96-1.05-.96c0,0-.76-.12-1.11.12s-.79.7-.79.7l-.15,4.35s.82,6.94.99,7.5,1.02,10.18.9,10.47.61,7.53.61,7.53l-64.53-.17Z" />
+              <svg
+                id="product-svg"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 109.67 125.67"
+              >
+                <path
+                  id="product-shape"
+                  class="cls-1"
+                  d="m.2,125.5l.39-8.68.35-10.82.32-7.02s.32-2.74.74-4.04,1.51-3.72,1.51-3.72l3.16-3.65v-.35l-.67-.74.49-1.51s1.9-2.67,2.04-3.51.63-2.18.63-2.18l1.72-2.14,3.27-2.11,4.39-2.18,2.07-.56,2.56.77.18.25v3.41s7.76,7.83,9.55,8.78,3.23,1.05,3.23,1.05c0,0,3.27-.18,4.14-.84s.95-1.93.95-1.93c0,0,.46-2.04.49-2.6s.35-2.63.35-2.63l.28-2.21v-2.56s-.42.25-.74-.21.32-.91.32-.91c0,0,7.99-3.67,9.95-6.95,0,0,1.01-.14,1.12,0s0,1.4,0,1.4c0,0,5.57-.64,6.59-.44,0,0,4.17,1.46,5.34,2.6s15.17,13.92,15.17,13.92c0,0-1.63-16.16-.38-17.01s1.55-1.55,1.55-1.55v-8.31s.23-.29.47-.29h13.22s.58,7.67,1.05,7.79,2.28,1.98,2.92,3.38,1.17,4.11,1.17,4.11l1.34,8.87.38,6.62s.96,13.25.93,14.59-.5,4.81-.73,5.16-1.6,4.43-4.49,6.24-7.96,1.23-7.96,1.23c0,0-4.46-1.49-5.72-2.28s-13.19-11.03-13.19-11.03c0,0-4.35-4.03-5.34-4.73s-1.05-.96-1.05-.96c0,0-.76-.12-1.11.12s-.79.7-.79.7l-.15,4.35s.82,6.94.99,7.5,1.02,10.18.9,10.47.61,7.53.61,7.53l-64.53-.17Z"
+                />
               </svg>
               <img id="background-image" src="assets/img/memoji-hero.png" />
             </div>
           </div>
         </div>
 
-        <h1 id="hero-title">Hi, I'm Sen.</h1>
+        <h1>Hi, I'm Sen.</h1>
 
-        <p>A UX designer and front-end developer, currently working as freelancer. Find out more <a href="/about.html">about me</a> 👻</p>
-
-        <div class="particle-wrapper">
-          <div class="particle-8"></div>
-          <div class="particle-7"></div>
-          <div class="particle-6"></div>
-          <div class="particle-5"></div>
-          <div class="particle-4"></div>
-          <div class="particle-3"></div>
-          <div class="particle-2"></div>
-          <div class="particle-1"></div>
-        </div>
+        <p>
+          Front-end developer who is always seeking new challenges. Find out
+          more <a href="/about.html">about me</a> 👻
+        </p>
       </div>
-      <footer>
-        <div class="footer-top">
-          <a href="https://github.com/chensov" target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href="https://codepen.io/senche" target="_blank"> <i class="fa-brands fa-codepen"></i></a>
-
-          <a href="https://github.com/chensov" target="_blank"> <i class="fa-brands fa-dribbble"></i></a>
-        </div>
-        <div class="footer-middle">
-          <p>
-            ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            Arsen Chensov. All Rights Reserved.
-          </p>
-        </div>
-        <div class="footer-left"></div>
-      </footer>
-      <script>
-        $(document).ready(function () {
-          var plane = document.getElementById("");
-          var rocket = document.getElementById("");
-          plane.homePos = { x: plane.offsetLeft, y: plane.offsetTop };
-          rocket.homePos = { x: rocket.offsetLeft, y: rocket.offsetTop };
-
-          $("").mousemove(function (e) {
-            parallax(e, plane, 20);
-            parallax(e, rocket, 29);
-          });
-        });
-
-        function parallax(e, target, layer) {
-          var x = target.homePos.x - (e.pageX - target.homePos.x) / layer;
-          var y = target.homePos.y - (e.pageY - target.homePos.y) / layer;
-          $(target).offset({ top: y, left: x });
-        }
-      </script>
-
-      <script src="js/memoji.js"></script>
-      <script src="js/darkmode.js"></script>
-      <script src="js/nav.js"></script>
     </div>
+    <footer>
+      <div class="footer-top">
+        <a href="https://github.com/chensov" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://codepen.io/senche" target="_blank">
+          <i class="fa-brands fa-codepen"></i
+        ></a>
+
+        <a href="https://github.com/chensov" target="_blank">
+          <i class="fa-brands fa-dribbble"></i
+        ></a>
+      </div>
+      <div class="footer-middle">
+        <p>Copyright © 2023 senche.dev. All rights reserved.</p>
+      </div>
+      <div class="footer-left"></div>
+    </footer>
+
+    <script src="js/memoji.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

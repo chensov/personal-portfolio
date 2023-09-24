@@ -22,6 +22,7 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
+  text-decoration: none;
 }
 
 .darkmode {
@@ -49,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  user-select: none;
 }
 
 header {
@@ -67,8 +69,10 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-width: 100%;
-  min-height: 100vh;
+  top: 200px;
+  margin-bottom: 20vh;
+  position: relative;
+  width: 100%;
 }
 
 p a {
@@ -228,6 +232,15 @@ h3 {
   display: block;
 }
 
+.moon {
+  background: var(--h1-clr);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.45rem;
+}
+
 .darkmode .moon {
   display: none;
 }
@@ -238,7 +251,7 @@ h3 {
   -webkit-background-clip: text;
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   display: none;
 }
 
@@ -321,8 +334,6 @@ h3 {
   width: 200vw;
   height: 100vh;
   cursor: pointer;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
   transition: all 0.5s ease-in;
 }
 
@@ -516,7 +527,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
   margin-bottom: 30px;
 }
 
@@ -873,20 +883,31 @@ h3 {
 
 .card {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 55% 40%;
   grid-template-rows: 1fr;
   margin: 60px 0;
   box-sizing: border-box;
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
-  cursor: pointer;
-  height: 400px;
-  min-width: 40%;
-  max-width: 80%;
+  height: 600px;
+  min-width: 500px;
+  max-width: 900px;
   background: var(--elements);
   border-radius: 30px;
   box-shadow: 0 9px 20px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.card-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.card-right img {
+  height: 450px;
+  border-radius: 10px;
 }
 
 .card-left {
@@ -896,7 +917,7 @@ h3 {
   justify-content: space-around;
   flex-direction: column;
   text-align: left;
-  margin: 20px 0px 20px 60px;
+  margin: 20px 0px 20px 50px;
 }
 
 .card .card-left h3 {
@@ -912,7 +933,8 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: rgb(229, 229, 229);
-  padding: 17px 60px;
+  width: 200px;
+  height: 45px;
   font-size: 1.3rem;
   border-radius: 10px;
   color: #9d9d9d;
@@ -921,9 +943,9 @@ h3 {
 }
 
 .card-left p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
-  width: 70%;
+  width: 80%;
   color: var(--p-clr);
 }
 
@@ -934,8 +956,41 @@ h3 {
   transition: transform 0.7s ease;
 }
 
+.fa-code {
+  font-size: 1.4rem;
+  margin: 0 10px;
+  color: #9d9d9d;
+  transition: transform 0.7s ease;
+}
+
+.learn-more:hover .fa-code {
+  transform: rotate(360deg);
+}
+
 .learn-more:hover .fa-arrow-right {
   transform: translateX(5px);
+}
+
+.card h6 {
+  color: var(--p-clr);
+}
+
+.tech-used {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tech-used img {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.tech-used img:hover {
+  filter: grayscale(0%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -1208,7 +1263,7 @@ footer {
   font-size: 0.9rem;
   position: absolute;
   text-align: center;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   bottom: 100%;
   width: 80%;
   background: var(--elements-3);
